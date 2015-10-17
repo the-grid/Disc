@@ -1,0 +1,4 @@
+github "thoughtbot/Argo" "v2.1.0"
+github "Quick/Nimble" "v2.0.0"
+github "Quick/Quick" "v0.6.0"
+github "edwardaux/Ogra" "2.1.0"

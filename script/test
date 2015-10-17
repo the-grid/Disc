@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+xcodebuild -workspace Disc.xcworkspace -scheme Disc-Mac -sdk macosx clean test
+xcodebuild -workspace Disc.xcworkspace -scheme Disc-iOS -sdk iphonesimulator clean test
