@@ -1,4 +1,6 @@
 github "thoughtbot/Argo" "v2.1.0"
 github "Quick/Nimble" "v2.0.0"
 github "Quick/Quick" "v0.6.0"
+github "antitypical/Result" "0.6.0-beta.3"
 github "edwardaux/Ogra" "2.1.0"
+github "thoughtbot/Swish" "695e50c1d285cbf681d6795bdf80c3a3d79f1999"

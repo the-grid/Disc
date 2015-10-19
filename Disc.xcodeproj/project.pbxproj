@@ -14,6 +14,8 @@
 		2C1CBAB81BD336D200F1E3E1 /* IdentitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */; settings = {ASSET_TAGS = (); }; };
 		2C1CBABA1BD336E800F1E3E1 /* TokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* TokenSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		2C1CBABB1BD336E800F1E3E1 /* TokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* TokenSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		2C6DC9841BD5B2BA006B4C96 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9821BD5B2BA006B4C96 /* Result.framework */; };
+		2C6DC9851BD5B2BA006B4C96 /* Swish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9831BD5B2BA006B4C96 /* Swish.framework */; };
 		2C7405C61BD32B8500243DBD /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7405C51BD32B8500243DBD /* UserSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		2C7405C71BD32B8500243DBD /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7405C51BD32B8500243DBD /* UserSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		2C7405CA1BD32E1A00243DBD /* ScopeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7405C91BD32E1A00243DBD /* ScopeSpec.swift */; settings = {ASSET_TAGS = (); }; };
@@ -47,6 +49,8 @@
 		2CEE1A5E1BD3043900D014B7 /* EqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEE1A5D1BD3043900D014B7 /* EqualTo.swift */; settings = {ASSET_TAGS = (); }; };
 		2CEE1A5F1BD3043900D014B7 /* EqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEE1A5D1BD3043900D014B7 /* EqualTo.swift */; settings = {ASSET_TAGS = (); }; };
 		2CEFBDE01BD21DE800B62F3C /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEFBDDE1BD21DE800B62F3C /* Argo.framework */; };
+		2CF8D6491BD5B616004D4B19 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9821BD5B2BA006B4C96 /* Result.framework */; settings = {ASSET_TAGS = (); }; };
+		2CF8D64A1BD5B64F004D4B19 /* Swish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9831BD5B2BA006B4C96 /* Swish.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,8 @@
 		2C1CBAB31BD336B700F1E3E1 /* ProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProviderSpec.swift; path = Models/ProviderSpec.swift; sourceTree = "<group>"; };
 		2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdentitySpec.swift; path = Models/IdentitySpec.swift; sourceTree = "<group>"; };
 		2C1CBAB91BD336E800F1E3E1 /* TokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenSpec.swift; path = Models/TokenSpec.swift; sourceTree = "<group>"; };
+		2C6DC9821BD5B2BA006B4C96 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C6DC9831BD5B2BA006B4C96 /* Swish.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7405C51BD32B8500243DBD /* UserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSpec.swift; path = Models/UserSpec.swift; sourceTree = "<group>"; };
 		2C7405C91BD32E1A00243DBD /* ScopeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScopeSpec.swift; path = Models/ScopeSpec.swift; sourceTree = "<group>"; };
 		2C8CAE721BD321EE008F7794 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +107,8 @@
 			files = (
 				2CEFBDE01BD21DE800B62F3C /* Argo.framework in Frameworks */,
 				2C095B681BD2F104009E297C /* Ogra.framework in Frameworks */,
+				2CF8D6491BD5B616004D4B19 /* Result.framework in Frameworks */,
+				2CF8D64A1BD5B64F004D4B19 /* Swish.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +128,8 @@
 			files = (
 				2CEBFC511BD21E8700C00DFF /* Argo.framework in Frameworks */,
 				2CEE1A581BD2F28000D014B7 /* Ogra.framework in Frameworks */,
+				2C6DC9841BD5B2BA006B4C96 /* Result.framework in Frameworks */,
+				2C6DC9851BD5B2BA006B4C96 /* Swish.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +210,8 @@
 				2CEE1A601BD3043E00D014B7 /* Operators */,
 				2CEFBDDE1BD21DE800B62F3C /* Argo.framework */,
 				2C095B671BD2F104009E297C /* Ogra.framework */,
+				2C6DC9821BD5B2BA006B4C96 /* Result.framework */,
+				2C6DC9831BD5B2BA006B4C96 /* Swish.framework */,
 			);
 			path = Disc;
 			sourceTree = "<group>";
