@@ -1,7 +1,7 @@
 import Argo
 import Ogra
 
-public struct Token {
+public struct GitHubToken {
     let username: String
     let value: String
     
@@ -14,8 +14,8 @@ public struct Token {
 
 // Mark: - Decodable
 
-extension Token: Decodable {
-    public static func decode(j: JSON) -> Decoded<Token> {
+extension GitHubToken: Decodable {
+    public static func decode(j: JSON) -> Decoded<GitHubToken> {
         return curry(self.init)
             <^> j <| "username"
             <*> j <| "token"
@@ -25,7 +25,7 @@ extension Token: Decodable {
 
 // Mark: - Encodable
 
-extension Token: Encodable {
+extension GitHubToken: Encodable {
     public func encode() -> JSON {
         return .Object([
             "username": username.encode(),
@@ -37,9 +37,9 @@ extension Token: Encodable {
 
 // Mark: - Equatable
 
-extension Token: Equatable {}
+extension GitHubToken: Equatable {}
 
-public func == (lhs: Token, rhs: Token) -> Bool {
+public func == (lhs: GitHubToken, rhs: GitHubToken) -> Bool {
     return lhs.username == rhs.username
         && lhs.value == rhs.value
 }

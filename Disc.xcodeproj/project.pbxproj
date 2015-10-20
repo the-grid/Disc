@@ -12,8 +12,8 @@
 		2C1CBAB51BD336B700F1E3E1 /* ProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB31BD336B700F1E3E1 /* ProviderSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		2C1CBAB71BD336D200F1E3E1 /* IdentitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */; settings = {ASSET_TAGS = (); }; };
 		2C1CBAB81BD336D200F1E3E1 /* IdentitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */; settings = {ASSET_TAGS = (); }; };
-		2C1CBABA1BD336E800F1E3E1 /* TokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* TokenSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		2C1CBABB1BD336E800F1E3E1 /* TokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* TokenSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1CBABA1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		2C1CBABB1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		2C6DC9841BD5B2BA006B4C96 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9821BD5B2BA006B4C96 /* Result.framework */; };
 		2C6DC9851BD5B2BA006B4C96 /* Swish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9831BD5B2BA006B4C96 /* Swish.framework */; };
 		2C7405C61BD32B8500243DBD /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7405C51BD32B8500243DBD /* UserSpec.swift */; settings = {ASSET_TAGS = (); }; };
@@ -36,8 +36,8 @@
 		2CCF4A4A1BD22F14006800E6 /* NSUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF4A481BD22F14006800E6 /* NSUUID.swift */; settings = {ASSET_TAGS = (); }; };
 		2CCF4A4D1BD22F3A006800E6 /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF4A4C1BD22F3A006800E6 /* NSURL.swift */; settings = {ASSET_TAGS = (); }; };
 		2CCF4A4E1BD22F3A006800E6 /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF4A4C1BD22F3A006800E6 /* NSURL.swift */; settings = {ASSET_TAGS = (); }; };
-		2CCF4A501BD248EB006800E6 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF4A4F1BD248EB006800E6 /* Token.swift */; settings = {ASSET_TAGS = (); }; };
-		2CCF4A511BD248EB006800E6 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF4A4F1BD248EB006800E6 /* Token.swift */; settings = {ASSET_TAGS = (); }; };
+		2CCF4A501BD248EB006800E6 /* GitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF4A4F1BD248EB006800E6 /* GitHubToken.swift */; settings = {ASSET_TAGS = (); }; };
+		2CCF4A511BD248EB006800E6 /* GitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF4A4F1BD248EB006800E6 /* GitHubToken.swift */; settings = {ASSET_TAGS = (); }; };
 		2CD2FDFA1BD2128800F25308 /* Disc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD2FDF91BD2128800F25308 /* Disc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CD2FE011BD2128800F25308 /* Disc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD2FDF61BD2128800F25308 /* Disc.framework */; settings = {ASSET_TAGS = (); }; };
 		2CD2FE1F1BD212AD00F25308 /* Disc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD2FE151BD212AC00F25308 /* Disc.framework */; settings = {ASSET_TAGS = (); }; };
@@ -74,7 +74,7 @@
 		2C095B671BD2F104009E297C /* Ogra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Ogra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C1CBAB31BD336B700F1E3E1 /* ProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProviderSpec.swift; path = Models/ProviderSpec.swift; sourceTree = "<group>"; };
 		2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdentitySpec.swift; path = Models/IdentitySpec.swift; sourceTree = "<group>"; };
-		2C1CBAB91BD336E800F1E3E1 /* TokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenSpec.swift; path = Models/TokenSpec.swift; sourceTree = "<group>"; };
+		2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubTokenSpec.swift; path = Models/GitHubTokenSpec.swift; sourceTree = "<group>"; };
 		2C6DC9821BD5B2BA006B4C96 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6DC9831BD5B2BA006B4C96 /* Swish.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7405C51BD32B8500243DBD /* UserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSpec.swift; path = Models/UserSpec.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		2CCF4A451BD22A29006800E6 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = Models/Provider.swift; sourceTree = "<group>"; };
 		2CCF4A481BD22F14006800E6 /* NSUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSUUID.swift; path = Extensions/NSUUID.swift; sourceTree = "<group>"; };
 		2CCF4A4C1BD22F3A006800E6 /* NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSURL.swift; path = Extensions/NSURL.swift; sourceTree = "<group>"; };
-		2CCF4A4F1BD248EB006800E6 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Token.swift; path = Models/Token.swift; sourceTree = "<group>"; };
+		2CCF4A4F1BD248EB006800E6 /* GitHubToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubToken.swift; path = Models/GitHubToken.swift; sourceTree = "<group>"; };
 		2CD2FDF61BD2128800F25308 /* Disc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Disc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD2FDF91BD2128800F25308 /* Disc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Disc.h; sourceTree = "<group>"; };
 		2CD2FDFB1BD2128800F25308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,10 +149,10 @@
 		2C7405C81BD32B8B00243DBD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */,
 				2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */,
 				2C1CBAB31BD336B700F1E3E1 /* ProviderSpec.swift */,
 				2C7405C91BD32E1A00243DBD /* ScopeSpec.swift */,
-				2C1CBAB91BD336E800F1E3E1 /* TokenSpec.swift */,
 				2C7405C51BD32B8500243DBD /* UserSpec.swift */,
 			);
 			name = Models;
@@ -161,10 +161,10 @@
 		2CCF4A3B1BD223DF006800E6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2CCF4A4F1BD248EB006800E6 /* GitHubToken.swift */,
 				2CCF4A421BD22447006800E6 /* Identity.swift */,
 				2CCF4A451BD22A29006800E6 /* Provider.swift */,
 				2CCF4A3F1BD22420006800E6 /* Scope.swift */,
-				2CCF4A4F1BD248EB006800E6 /* Token.swift */,
 				2CCF4A3C1BD223F9006800E6 /* User.swift */,
 			);
 			name = Models;
@@ -418,7 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCF4A4E1BD22F3A006800E6 /* NSURL.swift in Sources */,
-				2CCF4A511BD248EB006800E6 /* Token.swift in Sources */,
+				2CCF4A511BD248EB006800E6 /* GitHubToken.swift in Sources */,
 				2CCF4A471BD22A29006800E6 /* Provider.swift in Sources */,
 				2CEE1A5B1BD2FA5D00D014B7 /* Curry.swift in Sources */,
 				2CCF4A4A1BD22F14006800E6 /* NSUUID.swift in Sources */,
@@ -437,7 +437,7 @@
 				2C1CBAB51BD336B700F1E3E1 /* ProviderSpec.swift in Sources */,
 				2C1CBAB81BD336D200F1E3E1 /* IdentitySpec.swift in Sources */,
 				2C7405CB1BD32E1A00243DBD /* ScopeSpec.swift in Sources */,
-				2C1CBABB1BD336E800F1E3E1 /* TokenSpec.swift in Sources */,
+				2C1CBABB1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCF4A4D1BD22F3A006800E6 /* NSURL.swift in Sources */,
-				2CCF4A501BD248EB006800E6 /* Token.swift in Sources */,
+				2CCF4A501BD248EB006800E6 /* GitHubToken.swift in Sources */,
 				2CCF4A461BD22A29006800E6 /* Provider.swift in Sources */,
 				2CEE1A5A1BD2FA5D00D014B7 /* Curry.swift in Sources */,
 				2CCF4A491BD22F14006800E6 /* NSUUID.swift in Sources */,
@@ -465,7 +465,7 @@
 				2C1CBAB41BD336B700F1E3E1 /* ProviderSpec.swift in Sources */,
 				2C1CBAB71BD336D200F1E3E1 /* IdentitySpec.swift in Sources */,
 				2C7405CA1BD32E1A00243DBD /* ScopeSpec.swift in Sources */,
-				2C1CBABA1BD336E800F1E3E1 /* TokenSpec.swift in Sources */,
+				2C1CBABA1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

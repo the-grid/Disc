@@ -3,7 +3,7 @@ import Disc
 import Nimble
 import Quick
 
-class TokenSpec: QuickSpec {
+class GitHubTokenSpec: QuickSpec {
     override func spec() {
         let username = "gridbear"
         let value = "nijcoqf3h3287f7g"
@@ -13,11 +13,11 @@ class TokenSpec: QuickSpec {
             "token": .String(value)
         ])
         
-        let token = Token(username: username, value: value)
+        let token = GitHubToken(username: username, value: value)
         
         describe("decoding") {
-            it("should produce a Token") {
-                guard let decoded = Token.decode(json).value else {
+            it("should produce a GitHubToken") {
+                guard let decoded = GitHubToken.decode(json).value else {
                     return XCTFail("Unable to decode JSON: \(json)")
                 }
                 expect(decoded).to(equal(token))
