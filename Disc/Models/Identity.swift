@@ -2,14 +2,14 @@ import Argo
 import Ogra
 
 public struct Identity {
-    let bio: String?
-    let description: String
-    let id: String
-    let imageUrl: NSURL?
-    let location: String?
-    let provider: Provider
-    let url: NSURL
-    let username: String
+    public let bio: String?
+    public let description: String
+    public let id: String
+    public let imageUrl: NSURL?
+    public let location: String?
+    public let provider: Provider
+    public let url: NSURL
+    public let username: String
     
     public init(
         bio: String?,

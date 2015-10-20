@@ -2,8 +2,8 @@ import Argo
 import Ogra
 
 public struct GitHubToken {
-    let username: String
-    let value: String
+    public let username: String
+    public let value: String
     
     public init(username: String, value: String) {
         self.username = username

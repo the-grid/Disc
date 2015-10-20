@@ -15,7 +15,7 @@ public struct User {
         emailAddress: String,
         id: NSUUID,
         name: String,
-        scopes: [Scope]?
+        scopes: [Scope]? = nil
     ) {
         self.app = app
         self.avatarUrl = avatarUrl

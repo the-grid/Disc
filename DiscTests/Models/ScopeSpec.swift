@@ -62,7 +62,7 @@ class ScopeSpec: QuickSpec {
             }
         }
         
-        describe("decoding") {           
+        describe("decoding") {
             it("should produce a Scope") {
                 let rawValue = "update_profile"
                 let json = JSON.String(rawValue)
