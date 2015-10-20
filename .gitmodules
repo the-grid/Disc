@@ -16,3 +16,6 @@
 [submodule "Carthage/Checkouts/Swish"]
 	path = Carthage/Checkouts/Swish
 	url = https://github.com/thoughtbot/Swish.git
+[submodule "Carthage/Checkouts/Mockingjay"]
+	path = Carthage/Checkouts/Mockingjay
+	url = https://github.com/kylef/Mockingjay.git

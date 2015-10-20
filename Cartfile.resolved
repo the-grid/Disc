@@ -1,4 +1,5 @@
 github "thoughtbot/Argo" "v2.1.0"
+github "kylef/Mockingjay" "d0cddce977e3a90a148be3098c9c48067e15a5bb"
 github "Quick/Nimble" "v2.0.0"
 github "Quick/Quick" "v0.6.0"
 github "antitypical/Result" "0.6.0-beta.3"
