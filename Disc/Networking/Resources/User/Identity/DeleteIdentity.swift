@@ -1,4 +1,3 @@
-import enum Argo.JSON
 import Result
 import Swish
 
@@ -10,10 +9,6 @@ private struct DeleteIdentityRequest: Request, AuthenticatedRequest {
     
     func build() -> NSURLRequest {
         return request(.GET, "user/identities/remove/\(identity.id)", token: token)
-    }
-    
-    func parse(j: JSON) -> Result<ResponseType, NSError> {
-        return .Success()
     }
 }
 
