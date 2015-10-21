@@ -1,7 +1,4 @@
-import Foundation
 import Swish
-
-let baseUrl = NSURL(string: "https://passport.thegrid.io/")!
 
 public struct APIClient {
     let client = Swish.APIClient()

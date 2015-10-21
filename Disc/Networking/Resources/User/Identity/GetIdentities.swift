@@ -1,12 +1,12 @@
 import Result
 import Swish
 
-private struct GetIdentitiesRequest: Request, AuthenticatedRequest {
+private struct GetIdentitiesRequest: Request {
     typealias ResponseType = [Identity]
     let token: String
     
     func build() -> NSURLRequest {
-        return request(.GET, "api/user/identities", token: token)
+        return createRequest(.GET, "api/user/identities", token: token)
     }
 }
 

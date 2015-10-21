@@ -1,12 +1,12 @@
 import Result
 import Swish
 
-private struct GetPrivateGitHubTokenRequest: Request, AuthenticatedRequest {
+private struct GetPrivateGitHubTokenRequest: Request {
     typealias ResponseType = GitHubToken
     let token: String
     
     func build() -> NSURLRequest {
-        return request(.GET, "api/user/github_private", token: token)
+        return createRequest(.GET, "api/user/github_private", token: token)
     }
 }
 

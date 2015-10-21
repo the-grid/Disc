@@ -1,14 +1,14 @@
 import Result
 import Swish
 
-private struct DeleteIdentityRequest: Request, AuthenticatedRequest {
+private struct DeleteIdentityRequest: Request {
     typealias ResponseType = EmptyResponse
     
     let token: String
     let id: Int
     
     func build() -> NSURLRequest {
-        return request(.GET, "api/user/identities/remove/\(id)", token: token)
+        return createRequest(.GET, "api/user/identities/remove/\(id)", token: token)
     }
 }
 

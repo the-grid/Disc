@@ -1,7 +1,7 @@
 import Result
 import Swish
 
-private struct GetUserRequest: Request, AuthenticatedRequest {
+private struct GetUserRequest: Request {
     typealias ResponseType = User
     
     let token: String
@@ -13,15 +13,15 @@ private struct GetUserRequest: Request, AuthenticatedRequest {
     }
     
     func build() -> NSURLRequest {
-        let path: String
+        let pathComponent: String
         
         if let id = id {
-            path = "/\(id)"
+            pathComponent = "/\(id)"
         } else {
-            path = ""
+            pathComponent = ""
         }
         
-        return request(.GET, "api/user" + path, token: token)
+        return createRequest(.GET, "api/user" + pathComponent, token: token)
     }
 }
 
