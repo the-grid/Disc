@@ -25,3 +25,9 @@ func api(method: HTTPMethod, _ uri: String)(request: NSURLRequest) -> Bool {
     
     return http(method, uri: uri)(request: request)
 }
+
+func api(method: HTTPMethod, _ uri: String, body: [String: AnyObject])(request: NSURLRequest) -> Bool {
+    let bodyJson = try? NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions())
+    guard bodyJson == request.HTTPBody else { return false }
+    return api(method, uri)(request: request)
+}

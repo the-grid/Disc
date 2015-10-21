@@ -24,11 +24,12 @@ func createRequest(method: RequestMethod, _ path: String, token: String) -> NSMu
     return request
 }
 
-func createRequest(method: RequestMethod, _ path: String, _ queryItems: [String: String] = [:]) -> NSMutableURLRequest {
-    let url = createUrl(path, queryItems)!
+func createRequest(method: RequestMethod, _ path: String, body: [String: AnyObject] = [:]) -> NSMutableURLRequest {
+    let url = createUrl(path)!
     let request = NSMutableURLRequest(URL: url)
     
     request.HTTPMethod = method.rawValue
+    request.HTTPBody = try? NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions())
     request.setValue("application/json", forHTTPHeaderField: "Accept")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     request.setValue("gzip;q=1.0,compress;q=0.5", forHTTPHeaderField: "Accept-Encoding")

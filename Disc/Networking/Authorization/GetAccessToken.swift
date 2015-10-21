@@ -9,14 +9,14 @@ private struct GetAccessTokenRequest: Request {
     let code: String
     
     func build() -> NSURLRequest {
-        let params = [
+        let body = [
             "client_id": clientId,
             "client_secret": clientSecret,
             "code": code,
             "grant_type": "authorization_code",
         ]
         
-        return createRequest(.POST, "login/authorize/token", params)
+        return createRequest(.POST, "login/authorize/token", body: body)
     }
 }
 

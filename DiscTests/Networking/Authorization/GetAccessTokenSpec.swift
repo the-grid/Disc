@@ -18,6 +18,15 @@ class GetAccessTokenSpec: QuickSpec {
                     redirectUri: redirectUri
                 )
                 
+                let code = "code"
+                
+                let requestBody = [
+                    "client_id": clientId,
+                    "client_secret": clientSecret,
+                    "code": code,
+                    "grant_type": "authorization_code"
+                ]
+                
                 let value = "token"
                 
                 let responseBody = [
@@ -25,15 +34,10 @@ class GetAccessTokenSpec: QuickSpec {
                 ]
                 
                 let token = AccessToken(value: value)
-                let code = "code"
-                
+
                 let url = "https://passport.thegrid.io/login/authorize/token"
-                    + "?client_id=\(clientId)"
-                    + "&client_secret=\(clientSecret)"
-                    + "&code=\(code)"
-                    + "&grant_type=authorization_code"
                 
-                let matcher = api(.POST, url)
+                let matcher = api(.POST, url, body: requestBody)
                 let builder = json(responseBody)
                 self.stub(matcher, builder: builder)
                 
