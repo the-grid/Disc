@@ -1,11 +1,8 @@
 import Foundation
+import Swish
 
 protocol AuthenticatedRequest {
     var token: String { get }
-}
-
-enum RequestMethod: String {
-    case GET
 }
 
 func request(method: RequestMethod, _ path: String, token: String) -> NSMutableURLRequest {
