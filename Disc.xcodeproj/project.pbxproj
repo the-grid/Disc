@@ -26,6 +26,7 @@
 		2C1CBABB1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		2C32376F1BD701BF00C8F7DC /* MockingjayMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */; settings = {ASSET_TAGS = (); }; };
 		2C3237701BD701C000C8F7DC /* MockingjayMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */; settings = {ASSET_TAGS = (); }; };
+		2C61A3A01BD727E70087B295 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6B9F581BD632DC00691774 /* Mockingjay.framework */; settings = {ASSET_TAGS = (); }; };
 		2C6B9F591BD632DC00691774 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6B9F581BD632DC00691774 /* Mockingjay.framework */; };
 		2C6DC9841BD5B2BA006B4C96 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9821BD5B2BA006B4C96 /* Result.framework */; };
 		2C6DC9851BD5B2BA006B4C96 /* Swish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9831BD5B2BA006B4C96 /* Swish.framework */; };
@@ -157,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C61A3A01BD727E70087B295 /* Mockingjay.framework in Frameworks */,
 				2CD2FE011BD2128800F25308 /* Disc.framework in Frameworks */,
 				2C9FFDCB1BD3238F002FCDB7 /* Nimble.framework in Frameworks */,
 				2C9FFDCC1BD3238F002FCDB7 /* Quick.framework in Frameworks */,
