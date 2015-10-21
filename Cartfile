@@ -1,4 +1,4 @@
 github "antitypical/Result" "0.6.0-beta.3"
 github "edwardaux/Ogra" ~> 2.1.0
 github "thoughtbot/Argo" ~> 2.1.0
-github "thoughtbot/Swish" "695e50c1d285cbf681d6795bdf80c3a3d79f1999"
+github "thoughtbot/Swish" "b81fb834f2aeec1c601b3557f3ee4b312572fd25"
