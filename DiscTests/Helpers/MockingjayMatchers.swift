@@ -1,6 +1,6 @@
 import Mockingjay
 
-func api(method: HTTPMethod, _ uri: String, _ token: String)(request: NSURLRequest) -> Bool {
+func api(method: HTTPMethod, _ uri: String, token: String)(request: NSURLRequest) -> Bool {
     guard let headers = request.allHTTPHeaderFields,
         authorization = headers["Authorization"] where
         authorization == "Bearer \(token)"

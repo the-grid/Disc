@@ -21,7 +21,7 @@ class GetPrivateGitHubTokenSpec: QuickSpec {
                 
                 let githubToken = GitHubToken(username: username, value: value)
                 
-                let matcher = api(.GET, "https://passport.thegrid.io/api/user/github_private", passportToken)
+                let matcher = api(.GET, "https://passport.thegrid.io/api/user/github_private", token: passportToken)
                 let builder = json(responseBody)
                 self.stub(matcher, builder: builder)
                 

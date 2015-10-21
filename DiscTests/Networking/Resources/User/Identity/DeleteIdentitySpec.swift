@@ -13,7 +13,7 @@ class DeleteIdentitySpec: QuickSpec {
                 
                 let id = 1234
                 
-                let matcher = api(.GET, "https://passport.thegrid.io/api/user/identities/remove/\(id)", token)
+                let matcher = api(.GET, "https://passport.thegrid.io/api/user/identities/remove/\(id)", token: token)
                 let builder = http(204)
                 self.stub(matcher, builder: builder)
                 

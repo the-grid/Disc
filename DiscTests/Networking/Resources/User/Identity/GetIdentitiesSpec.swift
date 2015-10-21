@@ -46,7 +46,7 @@ class GetIdentitiesSpec: QuickSpec {
                     )
                 ]
                 
-                let matcher = api(.GET, "https://passport.thegrid.io/api/user/identities", token)
+                let matcher = api(.GET, "https://passport.thegrid.io/api/user/identities", token: token)
                 let builder = json(responseBody)
                 self.stub(matcher, builder: builder)
                 

@@ -37,7 +37,7 @@ class GetUserSpec: QuickSpec {
                         scopes: scopes.map { Scope(rawValue: $0)! }
                     )
                     
-                    let matcher = api(.GET, "https://passport.thegrid.io/api/user", token)
+                    let matcher = api(.GET, "https://passport.thegrid.io/api/user", token: token)
                     let builder = json(responseBody)
                     self.stub(matcher, builder: builder)
 
@@ -78,7 +78,7 @@ class GetUserSpec: QuickSpec {
                         name: name
                     )
                     
-                    let matcher = api(.GET, "https://passport.thegrid.io/api/user/\(id)", token)
+                    let matcher = api(.GET, "https://passport.thegrid.io/api/user/\(id)", token: token)
                     let builder = json(responseBody)
                     self.stub(matcher, builder: builder)
                     
