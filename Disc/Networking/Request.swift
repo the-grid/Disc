@@ -13,7 +13,7 @@ func request(method: RequestMethod, _ path: String, token: String) -> NSMutableU
     request.setValue("application/json", forHTTPHeaderField: "Accept")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     request.setValue("gzip;q=1.0,compress;q=0.5", forHTTPHeaderField: "Accept-Encoding")
-    request.setValue("Bearer token=\(token)", forHTTPHeaderField: "Authorization")
+    request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
     
     return request
 }

@@ -9,7 +9,7 @@ func api(method: HTTPMethod, _ uri: String, _ token: String)(request: NSURLReque
         accept == "application/json" &&
         contentType == "application/json" &&
         acceptEncoding == "gzip;q=1.0,compress;q=0.5" &&
-        authorization == "Bearer token=\(token)"
+        authorization == "Bearer \(token)"
     else {
         return false
     }
