@@ -11,6 +11,8 @@ private struct GetPrivateGitHubTokenRequest: Request, AuthenticatedRequest {
 }
 
 public extension APIClient {
+    /// Get the current user's private GitHub token.
+    /// - requires: An access token obtained with the `GitHubPrivate` scope.
     func getPrivateGitHubToken(completionHandler: Result<GitHubToken, NSError> -> Void) {
         let request = GetPrivateGitHubTokenRequest(token: token)
         client.performRequest(request, completionHandler: completionHandler)

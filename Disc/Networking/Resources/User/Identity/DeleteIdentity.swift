@@ -18,6 +18,8 @@ private struct DeleteIdentityRequest: Request, AuthenticatedRequest {
 }
 
 public extension APIClient {
+    /// Delete the provided `identity`.
+    /// - parameter identity: The identity to be deleted.
     func deleteIdentity(identity: Identity, completionHandler: Result<Void, NSError> -> Void) {
         let request = DeleteIdentityRequest(token: token, identity: identity)
         client.performRequest(request, completionHandler: completionHandler)

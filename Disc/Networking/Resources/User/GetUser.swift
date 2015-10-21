@@ -26,11 +26,14 @@ private struct GetUserRequest: Request, AuthenticatedRequest {
 }
 
 public extension APIClient {
+    /// Get the current user.
     func getUser(completionHandler: Result<User, NSError> -> Void) {
         let request = GetUserRequest(token: token)
         client.performRequest(request, completionHandler: completionHandler)
     }
     
+    /// Get the user with the provided `id`.
+    /// - parameter id: A user's ID.
     func getUser(id: NSUUID, completionHandler: Result<User, NSError> -> Void) {
         let request = GetUserRequest(token: token, id: id)
         client.performRequest(request, completionHandler: completionHandler)

@@ -11,6 +11,7 @@ private struct GetIdentitiesRequest: Request, AuthenticatedRequest {
 }
 
 public extension APIClient {
+    /// Get the identities for the current user.
     func getIdentities(completionHandler: Result<[Identity], NSError> -> Void) {
         let request = GetIdentitiesRequest(token: token)
         client.performRequest(request, completionHandler: completionHandler)
