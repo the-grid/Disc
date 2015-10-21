@@ -18,7 +18,7 @@ class DeleteIdentitySpec: QuickSpec {
                 self.stub(matcher, builder: builder)
                 
                 var responseValue: Void?
-                var responseError: NSError?
+                var responseError: NSError? = NSError(domain: "io.thegrid.Disc", code: 0, userInfo: nil)
                 
                 passport.deleteIdentity(id) { result in
                     responseValue = result.value
