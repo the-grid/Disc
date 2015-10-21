@@ -5,18 +5,18 @@ private struct DeleteIdentityRequest: Request, AuthenticatedRequest {
     typealias ResponseType = EmptyResponse
     
     let token: String
-    let identity: Identity
+    let id: Int
     
     func build() -> NSURLRequest {
-        return request(.GET, "user/identities/remove/\(identity.id)", token: token)
+        return request(.GET, "user/identities/remove/\(id)", token: token)
     }
 }
 
 public extension APIClient {
-    /// Delete the provided `identity`.
-    /// - parameter identity: The identity to be deleted.
-    func deleteIdentity(identity: Identity, completionHandler: Result<EmptyResponse, NSError> -> Void) {
-        let request = DeleteIdentityRequest(token: token, identity: identity)
+    /// Delete the identity with the provided `id`.
+    /// - parameter identity: The ID of the identity.
+    func deleteIdentity(id: Int, completionHandler: Result<EmptyResponse, NSError> -> Void) {
+        let request = DeleteIdentityRequest(token: token, id: id)
         client.performRequest(request, completionHandler: completionHandler)
     }
 }
