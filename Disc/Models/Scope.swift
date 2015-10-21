@@ -21,8 +21,4 @@ extension Scope: Decodable {}
 
 // Mark: - Encodable
 
-extension Scope: Encodable {
-    public func encode() -> JSON {
-        return .String(self.rawValue)
-    }
-}
+extension Scope: Encodable {}

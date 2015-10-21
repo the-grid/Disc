@@ -16,8 +16,4 @@ extension Provider: Decodable {}
 
 // Mark: - Encodable
 
-extension Provider: Encodable {
-    public func encode() -> JSON {
-        return .String(self.rawValue)
-    }
-}
+extension Provider: Encodable {}
