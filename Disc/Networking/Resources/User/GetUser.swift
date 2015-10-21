@@ -5,9 +5,9 @@ private struct GetUserRequest: Request, AuthenticatedRequest {
     typealias ResponseType = User
     
     let token: String
-    let id: NSUUID?
+    let id: String?
     
-    init(token: String, id: NSUUID? = nil) {
+    init(token: String, id: String? = nil) {
         self.token = token
         self.id = id
     }
@@ -16,7 +16,7 @@ private struct GetUserRequest: Request, AuthenticatedRequest {
         let path: String
         
         if let id = id {
-            path = "/\(id.UUIDString.lowercaseString)"
+            path = "/\(id)"
         } else {
             path = ""
         }
@@ -33,8 +33,8 @@ public extension APIClient {
     }
     
     /// Get the user with the provided `id`.
-    /// - parameter id: A user's ID.
-    func getUser(id: NSUUID, completionHandler: Result<User, NSError> -> Void) {
+    /// - parameter id: The ID of the user.
+    func getUser(id: String, completionHandler: Result<User, NSError> -> Void) {
         let request = GetUserRequest(token: token, id: id)
         client.performRequest(request, completionHandler: completionHandler)
     }

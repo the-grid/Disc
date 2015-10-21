@@ -85,7 +85,7 @@ class GetUserSpec: QuickSpec {
                     var responseUser: User?
                     var responseError: NSError?
                     
-                    passport.getUser(user.id) { result in
+                    passport.getUser(id) { result in
                         responseUser = result.value
                         responseError = result.error
                     }
