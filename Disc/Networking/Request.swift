@@ -6,7 +6,7 @@ protocol AuthenticatedRequest {
 }
 
 func request(method: RequestMethod, _ path: String, token: String) -> NSMutableURLRequest {
-    let url = NSURL(string: baseURL + path)!
+    let url = NSURL(string: path, relativeToURL: baseUrl)!
     let request = NSMutableURLRequest(URL: url)
     
     request.HTTPMethod = method.rawValue

@@ -8,7 +8,7 @@ private struct DeleteIdentityRequest: Request, AuthenticatedRequest {
     let id: Int
     
     func build() -> NSURLRequest {
-        return request(.GET, "user/identities/remove/\(id)", token: token)
+        return request(.GET, "api/user/identities/remove/\(id)", token: token)
     }
 }
 

@@ -6,7 +6,7 @@ private struct GetPublicGitHubTokenRequest: Request, AuthenticatedRequest {
     let token: String
     
     func build() -> NSURLRequest {
-        return request(.GET, "user/github", token: token)
+        return request(.GET, "api/user/github", token: token)
     }
 }
 

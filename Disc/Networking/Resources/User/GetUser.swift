@@ -21,7 +21,7 @@ private struct GetUserRequest: Request, AuthenticatedRequest {
             path = ""
         }
         
-        return request(.GET, "user" + path, token: token)
+        return request(.GET, "api/user" + path, token: token)
     }
 }
 

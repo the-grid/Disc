@@ -6,7 +6,7 @@ private struct GetIdentitiesRequest: Request, AuthenticatedRequest {
     let token: String
     
     func build() -> NSURLRequest {
-        return request(.GET, "user/identities", token: token)
+        return request(.GET, "api/user/identities", token: token)
     }
 }
 
