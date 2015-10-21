@@ -13,7 +13,7 @@ class GetIdentitiesSpec: QuickSpec {
                 
                 let bio = "Bear with me...what is a website. Al is helping out, good guy Al."
                 let description = "Identity only"
-                let id = "1234"
+                let id = 1234
                 let imageUrl = "https://pbs.twimg.com/profile_images/519492195351408641/vwSKyJtJ_400x400.jpeg"
                 let location = "The Woods"
                 let provider = "twitter"

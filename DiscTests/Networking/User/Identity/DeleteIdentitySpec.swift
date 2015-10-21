@@ -14,7 +14,7 @@ class DeleteIdentitySpec: QuickSpec {
                 let identity = Identity(
                     bio: "Bear with me...what is a website. Al is helping out, good guy Al.",
                     description: "Identity only",
-                    id: "1234",
+                    id: 1234,
                     imageUrl: NSURL(string: "https://pbs.twimg.com/profile_images/519492195351408641/vwSKyJtJ_400x400.jpeg")!,
                     location: "The Woods",
                     provider: .Twitter,

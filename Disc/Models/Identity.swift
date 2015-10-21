@@ -4,7 +4,7 @@ import Ogra
 public struct Identity {
     public let bio: String?
     public let description: String
-    public let id: String
+    public let id: Int
     public let imageUrl: NSURL?
     public let location: String?
     public let provider: Provider
@@ -14,7 +14,7 @@ public struct Identity {
     public init(
         bio: String?,
         description: String,
-        id: String,
+        id: Int,
         imageUrl: NSURL?,
         location: String?,
         provider: Provider,
