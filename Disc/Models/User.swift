@@ -1,6 +1,7 @@
 import Argo
 import Ogra
 
+/// A user.
 public struct User {
     public let app: NSUUID?
     public let avatarUrl: NSURL?

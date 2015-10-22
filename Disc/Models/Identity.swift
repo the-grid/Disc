@@ -1,6 +1,7 @@
 import Argo
 import Ogra
 
+/// An identity.
 public struct Identity {
     public let bio: String?
     public let description: String

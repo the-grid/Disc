@@ -33,6 +33,7 @@ public extension APIClient {
     }
     
     /// Get the user with the provided `id`.
+    ///
     /// - parameter id: The ID of the user.
     func getUser(id: String, completionHandler: Result<User, NSError> -> Void) {
         let request = GetUserRequest(token: token, id: id)

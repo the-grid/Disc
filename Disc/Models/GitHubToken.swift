@@ -1,6 +1,7 @@
 import Argo
 import Ogra
 
+/// A GitHub token.
 public struct GitHubToken {
     public let username: String
     public let value: String

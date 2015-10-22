@@ -1,5 +1,6 @@
 import Swish
 
+/// An OAuth client for Passport.
 public struct OAuthClient {
     let client = Swish.APIClient()
     let clientId: String
@@ -8,6 +9,7 @@ public struct OAuthClient {
     
     /// Create an OAuthClient that will convert authentication grants to access
     /// tokens with the provided `clientId`, `clientSecret`, and `redirectUri`.
+    ///
     /// - parameter clientId: The unique identifier of your application.
     /// - parameter clientSecret: Your application's passphrase.
     /// - parameter redirectUri: Your callback URI.

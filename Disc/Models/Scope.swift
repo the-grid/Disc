@@ -1,6 +1,7 @@
 import Argo
 import Ogra
 
+/// An authorization scope.
 public enum Scope: String {
     case Balance = "balance"
     case ContentManagement = "content_management"

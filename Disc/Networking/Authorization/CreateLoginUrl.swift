@@ -4,6 +4,7 @@ public extension OAuthClient {
     /// browser will redirect to the provided `redirectUri` that was passed to
     /// `init`. Included will be a `code` query string parameter for use with
     /// `getAccessToken(code:completionHandler:)`.
+    ///
     /// - parameter scopes: The desired authentication scopes.
     /// - parameter provider: The desired identity provider, if any.
     public func createLoginUrl(scopes scopes: [Scope] = [], provider: Provider? = nil) -> NSURL? {

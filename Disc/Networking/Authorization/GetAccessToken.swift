@@ -22,6 +22,7 @@ private struct GetAccessTokenRequest: Request {
 
 public extension OAuthClient {
     /// Get an access token using the provided `code`.
+    ///
     /// - parameter code: The access grant received in the `code` query
     /// parameter of the `redirectUri` that was passed to `init`.
     func getAccessToken(code: String, completionHandler: Result<AccessToken, NSError> -> Void) {

@@ -1,6 +1,7 @@
 import Argo
 import Ogra
 
+/// An identity provider.
 public enum Provider: String {
     case Facebook = "facebook"
     case Google = "google"
