@@ -1,0 +1,66 @@
+GitHubToken.swift
+	public let username: String
+	public let value: String
+	public init(username: String, value: String)
+	public static func decode(j: JSON) -> Decoded<GitHubToken>
+	public func encode() -> JSON
+	public func == (lhs: GitHubToken, rhs: GitHubToken) -> Bool
+Provider.swift
+	case Facebook = "facebook"
+	case Google = "google"
+	case GitHub = "github"
+	case Twitter = "twitter"
+Scope.swift
+	case Balance = "balance"
+	case ContentManagement = "content_management"
+	case CTAManagement = "cta_management"
+	case GitHubPublic = "github"
+	case GitHubPrivate = "github_private"
+	case Payment = "payment"
+	case Share = "share"
+	case UpdateProfile = "update_profile"
+	case WebsiteManagement = "website_management"
+Identity.swift
+	public let bio: String?
+	public let description: String
+	public let id: Int
+	public let imageUrl: NSURL?
+	public let location: String?
+	public let provider: Provider
+	public let url: NSURL
+	public let username: String
+	public init(
+        bio: String?,
+        description: String,
+        id: Int,
+        imageUrl: NSURL?,
+        location: String?,
+        provider: Provider,
+        url: NSURL,
+        username: String
+    )
+	public static func decode(j: JSON) -> Decoded<Identity>
+	public func encode() -> JSON
+	public func == (lhs: Identity, rhs: Identity) -> Bool
+User.swift
+	public let app: NSUUID?
+	public let avatarUrl: NSURL?
+	public var emailAddress: String
+	public let id: NSUUID
+	public var name: String
+	public let scopes: [Scope]?
+	public init(
+        app: NSUUID? = nil,
+        avatarUrl: NSURL? = nil,
+        emailAddress: String,
+        id: NSUUID,
+        name: String,
+        scopes: [Scope]? = nil
+    )
+	public static func decode(j: JSON) -> Decoded<User>
+	public func encode() -> JSON
+	public func == (lhs: User, rhs: User) -> Bool
+AccessToken.swift
+	public static func decode(j: JSON) -> Decoded<AccessToken>
+	public func encode() -> JSON
+	public func == (lhs: AccessToken, rhs: AccessToken) -> Bool
