@@ -9,6 +9,7 @@ public struct Identity {
     public let imageUrl: NSURL?
     public let location: String?
     public let provider: Provider
+    public let removable: Bool
     public let url: NSURL
     public let username: String
     
@@ -19,6 +20,7 @@ public struct Identity {
         imageUrl: NSURL?,
         location: String?,
         provider: Provider,
+        removable: Bool,
         url: NSURL,
         username: String
     ) {
@@ -28,6 +30,7 @@ public struct Identity {
         self.imageUrl = imageUrl
         self.location = location
         self.provider = provider
+        self.removable = removable
         self.url = url
         self.username = username
     }
@@ -45,6 +48,7 @@ extension Identity: Decodable {
             <*> j <|? "image"
             <*> j <|? "location"
             <*> j <|  "provider"
+            <*> j <|  "canRemove"
             <*> j <|  "url"
             <*> j <|  "username"
     }
@@ -62,6 +66,7 @@ extension Identity: Encodable {
             "image": imageUrl.encode(),
             "location": location.encode(),
             "provider": provider.encode(),
+            "canRemove": removable.encode(),
             "url": url.encode(),
             "username": username.encode()
         ])
@@ -80,6 +85,7 @@ public func == (lhs: Identity, rhs: Identity) -> Bool {
         && lhs.imageUrl == rhs.imageUrl
         && lhs.location == rhs.location
         && lhs.provider == rhs.provider
+        && lhs.removable == rhs.removable
         && lhs.url == rhs.url
         && lhs.username == rhs.username
 }

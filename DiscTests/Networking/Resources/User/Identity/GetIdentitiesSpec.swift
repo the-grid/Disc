@@ -17,6 +17,7 @@ class GetIdentitiesSpec: QuickSpec {
                 let imageUrl = "https://pbs.twimg.com/profile_images/519492195351408641/vwSKyJtJ_normal.jpeg"
                 let location = "The Woods"
                 let provider = "twitter"
+                let removable = true
                 let url = "https://twitter.com/grid_bear"
                 let username = "grid_bear"
                 
@@ -28,6 +29,7 @@ class GetIdentitiesSpec: QuickSpec {
                         "image": imageUrl,
                         "location": location,
                         "provider": provider,
+                        "canRemove": removable,
                         "url": url,
                         "username": username
                     ]
@@ -41,6 +43,7 @@ class GetIdentitiesSpec: QuickSpec {
                         imageUrl: NSURL(string: imageUrl)!,
                         location: location,
                         provider: Provider(rawValue: provider)!,
+                        removable: removable,
                         url: NSURL(string: url)!,
                         username: username
                     )

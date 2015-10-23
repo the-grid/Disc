@@ -8,6 +8,6 @@ internal func curry<A, B, C, D, E, F, G>(function: (A, B, C, D, E, F) -> G)(_ `a
     return function(`a`, `b`, `c`, `d`, `e`, `f`)
 }
 
-internal func curry<A, B, C, D, E, F, G, H, I>(function: (A, B, C, D, E, F, G, H) -> I)(_ `a`: A)(_ `b`: B)(_ `c`: C)(_ `d`: D)(_ `e`: E)(_ `f`: F)(_ `g`: G)(_ `h`: H) -> I {
-    return function(`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`)
+internal func curry<A, B, C, D, E, F, G, H, I, J>(function: (A, B, C, D, E, F, G, H, I) -> J)(_ `a`: A)(_ `b`: B)(_ `c`: C)(_ `d`: D)(_ `e`: E)(_ `f`: F)(_ `g`: G)(_ `h`: H)(_ `i`: I) -> J {
+    return function(`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`)
 }
