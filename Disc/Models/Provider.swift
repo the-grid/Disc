@@ -6,6 +6,8 @@ public enum Provider: String {
     case Facebook = "facebook"
     case Google = "google"
     case GitHub = "github"
+    case GitHubPublic = "github_public"
+    case GitHubPrivate = "github_private"
     case Twitter = "twitter"
 }
 

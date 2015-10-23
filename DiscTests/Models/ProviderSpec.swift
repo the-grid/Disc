@@ -19,6 +19,18 @@ class ProviderSpec: QuickSpec {
                 }
             }
             
+            describe("GitHub (public)") {
+                it("should have the correct raw value") {
+                    expect(Provider.GitHubPublic.rawValue).to(equal("github_public"))
+                }
+            }
+            
+            describe("GitHub (private)") {
+                it("should have the correct raw value") {
+                    expect(Provider.GitHubPrivate.rawValue).to(equal("github_private"))
+                }
+            }
+            
             describe("Google") {
                 it("should have the correct raw value") {
                     expect(Provider.Google.rawValue).to(equal("google"))
