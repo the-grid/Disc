@@ -20,7 +20,7 @@ func createUrl(path: String, _ queryItems: [String: String] = [:]) -> NSURL? {
 
 func createRequest(method: RequestMethod, _ path: String, token: String) -> NSMutableURLRequest {
     let request = createRequest(method, path)
-    request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+    setAuthorizationHeaderForRequest(request, token: token)
     return request
 }
 
@@ -38,4 +38,14 @@ func createRequest(method: RequestMethod, _ path: String, body: [String: AnyObje
     request.setValue("gzip;q=1.0,compress;q=0.5", forHTTPHeaderField: "Accept-Encoding")
     
     return request
+}
+
+func createRequest(method: RequestMethod, _ path: String, token: String, body: [String: AnyObject]) -> NSMutableURLRequest {
+    let request = createRequest(method, path, body: body)
+    setAuthorizationHeaderForRequest(request, token: token)
+    return request
+}
+
+private func setAuthorizationHeaderForRequest(request: NSMutableURLRequest, token: String) {
+    request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 }
