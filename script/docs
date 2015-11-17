@@ -3,6 +3,7 @@
 jazzy \
   --author "The Grid" \
   --author_url "https://thegrid.io" \
+  --clean \
   --github_url "https://github.com/the-grid/Disc" \
   --module Disc \
   --output Documentation \
