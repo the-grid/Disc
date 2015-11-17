@@ -9,6 +9,8 @@ Provider.swift
 	case Facebook = "facebook"
 	case Google = "google"
 	case GitHub = "github"
+	case GitHubPublic = "github_public"
+	case GitHubPrivate = "github_private"
 	case Twitter = "twitter"
 Scope.swift
 	case Balance = "balance"
