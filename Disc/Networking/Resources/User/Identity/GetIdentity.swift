@@ -15,7 +15,7 @@ private struct GetIdentityRequest: Request {
 public extension APIClient {
     /// Get the identity with the provided `id`.
     ///
-    /// - parameter identity: The ID of the identity.
+    /// - parameter id: The ID of the identity.
     func getIdentity(id: Int, completionHandler: Result<Identity, NSError> -> Void) {
         let request = GetIdentityRequest(token: token, id: id)
         client.performRequest(request, completionHandler: completionHandler)
