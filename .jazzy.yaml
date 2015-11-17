@@ -1,0 +1,13 @@
+custom_categories:
+  - name: Models
+    children:
+    - AccessToken
+    - GitHubToken
+    - Identity
+    - Provider
+    - Scope
+    - User
+  - name: Networking
+    children:
+    - APIClient
+    - OAuthClient
