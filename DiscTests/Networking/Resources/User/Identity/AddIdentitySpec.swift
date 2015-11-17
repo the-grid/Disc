@@ -7,7 +7,7 @@ import Result
 class AddIdentitySpec: QuickSpec {
     override func spec() {
         describe("adding an identity") {
-            fit("should result in an identity") {
+            it("should result in an identity") {
                 let token = "token"
                 let passport = APIClient(token: token)
                 
