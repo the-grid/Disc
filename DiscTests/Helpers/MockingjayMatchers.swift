@@ -27,18 +27,37 @@ func api(method: HTTPMethod, _ uri: String)(request: NSURLRequest) -> Bool {
 }
 
 func api(method: HTTPMethod, _ uri: String, body: [String: AnyObject])(request: NSURLRequest) -> Bool {
-    guard let bodyStream = request.HTTPBodyStream else { return false }
+    guard let stream = request.HTTPBodyStream else { return false }
     
-    bodyStream.open()
+    stream.open()
     
-    guard let bodyStreamJsonObject = try? NSJSONSerialization.JSONObjectWithStream(bodyStream, options: NSJSONReadingOptions()) else {
+    guard let streamJsonObject = try? NSJSONSerialization.JSONObjectWithStream(stream, options: NSJSONReadingOptions()) else {
         return false
     }
     
-    let bodyStreamJsonData = try? NSJSONSerialization.dataWithJSONObject(bodyStreamJsonObject, options: NSJSONWritingOptions())
-    let bodyJsonData = try? NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions())
+    guard let streamDictionary = streamJsonObject as? [String: AnyObject] else { return false }
+    
+    let sortedStreamDictionary = sortDictionary(streamDictionary)
+    let sortedBody = sortDictionary(body)
+    
+    let bodyStreamJsonData = try? NSJSONSerialization.dataWithJSONObject(sortedStreamDictionary, options: NSJSONWritingOptions())
+    let bodyJsonData = try? NSJSONSerialization.dataWithJSONObject(sortedBody, options: NSJSONWritingOptions())
     
     guard bodyStreamJsonData == bodyJsonData else { return false }
     
     return api(method, uri)(request: request)
+}
+
+func api(method: HTTPMethod, _ uri: String, token: String, body: [String: AnyObject])(request: NSURLRequest) -> Bool {
+    return api(method, uri, token: token)(request: request) && api(method, uri, body: body)(request: request)
+}
+
+private func sortDictionary(dictionary: [String: AnyObject]) -> [String: AnyObject] {
+    return dictionary
+        .sort { $0.0 < $1.0 }
+        .reduce([:]) { (var accumulator, pair) in
+            let (key, value) = pair
+            accumulator[key] = value
+            return accumulator
+        }
 }
