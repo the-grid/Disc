@@ -5,7 +5,5 @@ jazzy \
   --author_url "https://thegrid.io" \
   --github_url "https://github.com/the-grid/Disc" \
   --module Disc \
-  --module-version 0.1.0 \
   --output Documentation \
   --skip-undocumented \
-  --swift-version 2.0 \
