@@ -28,6 +28,8 @@
 		2C565DB21BFCC09200F63711 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DAE1BFCC09200F63711 /* Curry.swift */; };
 		2C565DB31BFCC09200F63711 /* EqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DB01BFCC09200F63711 /* EqualTo.swift */; };
 		2C565DB41BFCC09200F63711 /* EqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DB01BFCC09200F63711 /* EqualTo.swift */; };
+		2C565DB61BFCC25500F63711 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DB51BFCC25500F63711 /* Addition.swift */; };
+		2C565DB71BFCC25500F63711 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DB51BFCC25500F63711 /* Addition.swift */; };
 		2C61A3A01BD727E70087B295 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6B9F581BD632DC00691774 /* Mockingjay.framework */; };
 		2C6B9F591BD632DC00691774 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6B9F581BD632DC00691774 /* Mockingjay.framework */; };
 		2C6DC9841BD5B2BA006B4C96 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9821BD5B2BA006B4C96 /* Result.framework */; };
@@ -132,6 +134,7 @@
 		2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockingjayMatchers.swift; path = Helpers/MockingjayMatchers.swift; sourceTree = "<group>"; };
 		2C565DAE1BFCC09200F63711 /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
 		2C565DB01BFCC09200F63711 /* EqualTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualTo.swift; sourceTree = "<group>"; };
+		2C565DB51BFCC25500F63711 /* Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
 		2C6B9F581BD632DC00691774 /* Mockingjay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mockingjay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6DC9821BD5B2BA006B4C96 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6DC9831BD5B2BA006B4C96 /* Swish.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				2C565DB01BFCC09200F63711 /* EqualTo.swift */,
+				2C565DB51BFCC25500F63711 /* Addition.swift */,
 			);
 			path = Operators;
 			sourceTree = "<group>";
@@ -648,6 +652,7 @@
 				2CF8D6821BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */,
 				2CF8D6511BD5B7D1004D4B19 /* APIClient.swift in Sources */,
 				2CF8D65F1BD5CE5E004D4B19 /* NSUUID.swift in Sources */,
+				2C565DB71BFCC25500F63711 /* Addition.swift in Sources */,
 				2CF8D6781BD5D48D004D4B19 /* GetIdentities.swift in Sources */,
 				2CCF4A411BD22420006800E6 /* Scope.swift in Sources */,
 				2CF8D66B1BD5D2F3004D4B19 /* GetUser.swift in Sources */,
@@ -700,6 +705,7 @@
 				2CF8D6811BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */,
 				2CF8D6501BD5B7D1004D4B19 /* APIClient.swift in Sources */,
 				2CF8D65E1BD5CE5E004D4B19 /* NSUUID.swift in Sources */,
+				2C565DB61BFCC25500F63711 /* Addition.swift in Sources */,
 				2CF8D6771BD5D48D004D4B19 /* GetIdentities.swift in Sources */,
 				2CCF4A401BD22420006800E6 /* Scope.swift in Sources */,
 				2CF8D66A1BD5D2F3004D4B19 /* GetUser.swift in Sources */,
