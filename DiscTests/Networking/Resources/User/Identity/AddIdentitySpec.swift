@@ -7,27 +7,31 @@ import Result
 class AddIdentitySpec: QuickSpec {
     override func spec() {
         describe("adding an identity") {
-            it("should result in an identity") {
-                let token = "token"
-                let passport = APIClient(token: token)
+            var token: String!
+            var passport: APIClient!
+            
+            var providerAccessToken: String!
+            var provider: String!
+            
+            var responseBody: [String: AnyObject]!
+            var identity: Identity!
+            
+            beforeEach {
+                token = "token"
+                passport = APIClient(token: token)
                 
-                let providerAccessToken = "provider access token"
+                providerAccessToken = "provider access token"
                 
                 let bio = "Bear with me...what is a website. Al is helping out, good guy Al."
                 let description = "Identity only"
                 let id = 1234
                 let imageUrl = "https://pbs.twimg.com/profile_images/519492195351408641/vwSKyJtJ_normal.jpeg"
                 let location = "The Woods"
-                let provider = "twitter"
+                provider = "twitter"
                 let url = "https://twitter.com/grid_bear"
                 let username = "grid_bear"
                 
-                let requestBody = [
-                    "provider": provider,
-                    "token": providerAccessToken
-                ]
-                
-                let responseBody = [
+                responseBody = [
                     "bio": bio,
                     "description": description,
                     "id": id,
@@ -38,7 +42,7 @@ class AddIdentitySpec: QuickSpec {
                     "username": username
                 ]
                 
-                let identity = Identity(
+                identity = Identity(
                     bio: bio,
                     description: description,
                     id: id,
@@ -48,21 +52,57 @@ class AddIdentitySpec: QuickSpec {
                     url: NSURL(string: url)!,
                     username: username
                 )
-                
-                let matcher = api(.POST, "https://passport.thegrid.io/api/user/identities", token: token, body: requestBody)
-                let builder = json(responseBody)
-                self.stub(matcher, builder: builder)
-                
-                var responseValue: Identity?
-                var responseError: NSError?
-                
-                passport.addIdentity(identity.provider, token: providerAccessToken) { result in
-                    responseValue = result.value
-                    responseError = result.error
+            }
+            
+            context("providing only an access token") {
+                it("should result in an identity") {
+                    let requestBody = [
+                        "provider": provider,
+                        "token": providerAccessToken
+                    ]
+                    
+                    let matcher = api(.POST, "https://passport.thegrid.io/api/user/identities", token: token, body: requestBody)
+                    let builder = json(responseBody)
+                    self.stub(matcher, builder: builder)
+                    
+                    var responseValue: Identity?
+                    var responseError: NSError?
+                    
+                    passport.addIdentity(identity.provider, token: providerAccessToken) { result in
+                        responseValue = result.value
+                        responseError = result.error
+                    }
+                    
+                    expect(responseValue).toEventually(equal(identity))
+                    expect(responseError).toEventually(beNil())
                 }
-                
-                expect(responseValue).toEventually(equal(identity))
-                expect(responseError).toEventually(beNil())
+            }
+            
+            context("providing a token secret") {
+                it("should result in an identity") {
+                    let providerTokenSecret = "provider token secret"
+                    
+                    let requestBody = [
+                        "provider": provider,
+                        "token": providerAccessToken,
+                        "token_secret": providerTokenSecret
+                    ]
+                    
+                    let matcher = api(.POST, "https://passport.thegrid.io/api/user/identities", token: token, body: requestBody)
+                    let builder = json(responseBody)
+                    self.stub(matcher, builder: builder)
+                    
+                    var responseValue: Identity?
+                    var responseError: NSError?
+                    
+                    passport.addIdentity(identity.provider, token: providerAccessToken, secret: providerTokenSecret) { result in
+                        responseValue = result.value
+                        responseError = result.error
+                    }
+                    
+                    expect(responseValue).toEventually(equal(identity))
+                    expect(responseError).toEventually(beNil())
+                }
             }
         }
     }
