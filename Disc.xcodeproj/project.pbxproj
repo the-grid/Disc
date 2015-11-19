@@ -24,6 +24,12 @@
 		2C1CBABB1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */; };
 		2C32376F1BD701BF00C8F7DC /* MockingjayMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */; };
 		2C3237701BD701C000C8F7DC /* MockingjayMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */; };
+		2C565DB11BFCC09200F63711 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DAE1BFCC09200F63711 /* Curry.swift */; };
+		2C565DB21BFCC09200F63711 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DAE1BFCC09200F63711 /* Curry.swift */; };
+		2C565DB31BFCC09200F63711 /* EqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DB01BFCC09200F63711 /* EqualTo.swift */; };
+		2C565DB41BFCC09200F63711 /* EqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DB01BFCC09200F63711 /* EqualTo.swift */; };
+		2C565DB61BFCC25500F63711 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DB51BFCC25500F63711 /* Addition.swift */; };
+		2C565DB71BFCC25500F63711 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DB51BFCC25500F63711 /* Addition.swift */; };
 		2C61A3A01BD727E70087B295 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6B9F581BD632DC00691774 /* Mockingjay.framework */; };
 		2C6B9F591BD632DC00691774 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6B9F581BD632DC00691774 /* Mockingjay.framework */; };
 		2C6DC9841BD5B2BA006B4C96 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9821BD5B2BA006B4C96 /* Result.framework */; };
@@ -97,10 +103,6 @@
 		2CF8D67E1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D67C1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift */; };
 		2CF8D6811BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */; };
 		2CF8D6821BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */; };
-		2CF8D6871BD5F6E1004D4B19 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6841BD5F6E1004D4B19 /* Curry.swift */; };
-		2CF8D6881BD5F6E1004D4B19 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6841BD5F6E1004D4B19 /* Curry.swift */; };
-		2CF8D6891BD5F6E1004D4B19 /* EqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6861BD5F6E1004D4B19 /* EqualTo.swift */; };
-		2CF8D68A1BD5F6E1004D4B19 /* EqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6861BD5F6E1004D4B19 /* EqualTo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,9 @@
 		2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdentitySpec.swift; path = Models/IdentitySpec.swift; sourceTree = "<group>"; };
 		2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubTokenSpec.swift; path = Models/GitHubTokenSpec.swift; sourceTree = "<group>"; };
 		2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockingjayMatchers.swift; path = Helpers/MockingjayMatchers.swift; sourceTree = "<group>"; };
+		2C565DAE1BFCC09200F63711 /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
+		2C565DB01BFCC09200F63711 /* EqualTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualTo.swift; sourceTree = "<group>"; };
+		2C565DB51BFCC25500F63711 /* Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
 		2C6B9F581BD632DC00691774 /* Mockingjay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mockingjay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6DC9821BD5B2BA006B4C96 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6DC9831BD5B2BA006B4C96 /* Swish.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,8 +176,6 @@
 		2CF8D6741BD5D48D004D4B19 /* GetIdentities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIdentities.swift; sourceTree = "<group>"; };
 		2CF8D67C1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPublicGitHubToken.swift; path = GitHubToken/GetPublicGitHubToken.swift; sourceTree = "<group>"; };
 		2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPrivateGitHubToken.swift; path = GitHubToken/GetPrivateGitHubToken.swift; sourceTree = "<group>"; };
-		2CF8D6841BD5F6E1004D4B19 /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
-		2CF8D6861BD5F6E1004D4B19 /* EqualTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualTo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,23 @@
 				2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		2C565DAD1BFCC09200F63711 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				2C565DAE1BFCC09200F63711 /* Curry.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		2C565DAF1BFCC09200F63711 /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				2C565DB01BFCC09200F63711 /* EqualTo.swift */,
+				2C565DB51BFCC25500F63711 /* Addition.swift */,
+			);
+			path = Operators;
 			sourceTree = "<group>";
 		};
 		2C7405C81BD32B8B00243DBD /* Models */ = {
@@ -330,8 +350,6 @@
 				2CCF4A3F1BD22420006800E6 /* Scope.swift */,
 				2CCF4A3C1BD223F9006800E6 /* User.swift */,
 				2CF8D6591BD5CE5E004D4B19 /* Extensions */,
-				2CF8D6831BD5F6E1004D4B19 /* Functions */,
-				2CF8D6851BD5F6E1004D4B19 /* Operators */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -361,8 +379,10 @@
 			children = (
 				2CD2FDF91BD2128800F25308 /* Disc.h */,
 				2CD2FDFB1BD2128800F25308 /* Info.plist */,
+				2C565DAD1BFCC09200F63711 /* Functions */,
 				2CCF4A3B1BD223DF006800E6 /* Models */,
 				2CF8D64E1BD5B7A6004D4B19 /* Networking */,
+				2C565DAF1BFCC09200F63711 /* Operators */,
 				2CEFBDDE1BD21DE800B62F3C /* Argo.framework */,
 				2C095B671BD2F104009E297C /* Ogra.framework */,
 				2C6DC9821BD5B2BA006B4C96 /* Result.framework */,
@@ -444,24 +464,6 @@
 				2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */,
 			);
 			name = GitHubToken;
-			sourceTree = "<group>";
-		};
-		2CF8D6831BD5F6E1004D4B19 /* Functions */ = {
-			isa = PBXGroup;
-			children = (
-				2CF8D6841BD5F6E1004D4B19 /* Curry.swift */,
-			);
-			name = Functions;
-			path = Models/Functions;
-			sourceTree = "<group>";
-		};
-		2CF8D6851BD5F6E1004D4B19 /* Operators */ = {
-			isa = PBXGroup;
-			children = (
-				2CF8D6861BD5F6E1004D4B19 /* EqualTo.swift */,
-			);
-			name = Operators;
-			path = Models/Operators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -641,18 +643,19 @@
 				2CCF4A511BD248EB006800E6 /* GitHubToken.swift in Sources */,
 				2CF8D65D1BD5CE5E004D4B19 /* NSURL.swift in Sources */,
 				2CCF4A471BD22A29006800E6 /* Provider.swift in Sources */,
-				2CF8D68A1BD5F6E1004D4B19 /* EqualTo.swift in Sources */,
 				2C9C58681BD793D600EFCA29 /* GetAccessToken.swift in Sources */,
+				2C565DB21BFCC09200F63711 /* Curry.swift in Sources */,
+				2C565DB41BFCC09200F63711 /* EqualTo.swift in Sources */,
 				2CF8D6761BD5D48D004D4B19 /* DeleteIdentity.swift in Sources */,
 				2C9C586A1BD793D600EFCA29 /* CreateLoginUrl.swift in Sources */,
 				2C9C58631BD7925500EFCA29 /* OAuthClient.swift in Sources */,
 				2CF8D6821BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */,
 				2CF8D6511BD5B7D1004D4B19 /* APIClient.swift in Sources */,
 				2CF8D65F1BD5CE5E004D4B19 /* NSUUID.swift in Sources */,
+				2C565DB71BFCC25500F63711 /* Addition.swift in Sources */,
 				2CF8D6781BD5D48D004D4B19 /* GetIdentities.swift in Sources */,
 				2CCF4A411BD22420006800E6 /* Scope.swift in Sources */,
 				2CF8D66B1BD5D2F3004D4B19 /* GetUser.swift in Sources */,
-				2CF8D6881BD5F6E1004D4B19 /* Curry.swift in Sources */,
 				2CCF4A441BD22447006800E6 /* Identity.swift in Sources */,
 				2CCF4A3E1BD223F9006800E6 /* User.swift in Sources */,
 				2C9C589A1BD7AE6E00EFCA29 /* Request.swift in Sources */,
@@ -693,18 +696,19 @@
 				2CCF4A501BD248EB006800E6 /* GitHubToken.swift in Sources */,
 				2CF8D65C1BD5CE5E004D4B19 /* NSURL.swift in Sources */,
 				2CCF4A461BD22A29006800E6 /* Provider.swift in Sources */,
-				2CF8D6891BD5F6E1004D4B19 /* EqualTo.swift in Sources */,
 				2C9C58671BD793D600EFCA29 /* GetAccessToken.swift in Sources */,
+				2C565DB11BFCC09200F63711 /* Curry.swift in Sources */,
+				2C565DB31BFCC09200F63711 /* EqualTo.swift in Sources */,
 				2CF8D6751BD5D48D004D4B19 /* DeleteIdentity.swift in Sources */,
 				2C9C58691BD793D600EFCA29 /* CreateLoginUrl.swift in Sources */,
 				2C9C58621BD7925500EFCA29 /* OAuthClient.swift in Sources */,
 				2CF8D6811BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */,
 				2CF8D6501BD5B7D1004D4B19 /* APIClient.swift in Sources */,
 				2CF8D65E1BD5CE5E004D4B19 /* NSUUID.swift in Sources */,
+				2C565DB61BFCC25500F63711 /* Addition.swift in Sources */,
 				2CF8D6771BD5D48D004D4B19 /* GetIdentities.swift in Sources */,
 				2CCF4A401BD22420006800E6 /* Scope.swift in Sources */,
 				2CF8D66A1BD5D2F3004D4B19 /* GetUser.swift in Sources */,
-				2CF8D6871BD5F6E1004D4B19 /* Curry.swift in Sources */,
 				2CCF4A431BD22447006800E6 /* Identity.swift in Sources */,
 				2CCF4A3D1BD223F9006800E6 /* User.swift in Sources */,
 				2C9C58991BD7AE6E00EFCA29 /* Request.swift in Sources */,
