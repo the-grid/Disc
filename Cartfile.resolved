@@ -1,7 +1,7 @@
 github "thoughtbot/Argo" "v2.2.0"
-github "kylef/Mockingjay" "d0cddce977e3a90a148be3098c9c48067e15a5bb"
 github "Quick/Nimble" "v2.0.0"
 github "Quick/Quick" "v0.6.0"
+github "kylef/Mockingjay" "40a2f0f4efb483b398dfe46e5d8a3cf6c1510ec3"
 github "antitypical/Result" "0.6.0-beta.5"
 github "edwardaux/Ogra" "ad483a51f877c7ad2818d24349fe4e0ddeab1aac"
 github "thoughtbot/Swish" "2d485a7fd411bb92dc5cad2a550508574d3aebbf"
