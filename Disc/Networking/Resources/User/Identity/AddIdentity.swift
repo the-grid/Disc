@@ -74,7 +74,7 @@ private struct AddIdentityRequest: Request {
 }
 
 public extension APIClient {
-    /// Add an `identity` using an access token.
+    /// Add an identity using an access token.
     ///
     /// - parameter provider: The provider of the identity to add.
     /// - parameter token: The access token for the `provider`.
@@ -90,7 +90,7 @@ public extension APIClient {
         client.performRequest(request, completionHandler: completionHandler)
     }
     
-    /// Add an `identity` using an auth code.
+    /// Add an identity using an auth code.
     ///
     /// - parameter provider: The provider of the identity to add.
     /// - parameter code: The auth code for the `provider`.
