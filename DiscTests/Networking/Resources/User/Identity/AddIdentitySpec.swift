@@ -104,6 +104,34 @@ class AddIdentitySpec: QuickSpec {
                     expect(responseError).toEventually(beNil())
                 }
             }
+            
+            context("providing an auth code and redirect URI") {
+                it("should result in an identity") {
+                    let authCode = "provider auth code"
+                    let redirectUri = "redirect URI"
+                    
+                    let requestBody = [
+                        "provider": provider,
+                        "code": authCode,
+                        "redirect_uri": redirectUri
+                    ]
+                    
+                    let matcher = api(.POST, "https://passport.thegrid.io/api/user/identities", token: token, body: requestBody)
+                    let builder = json(responseBody)
+                    self.stub(matcher, builder: builder)
+                    
+                    var responseValue: Identity?
+                    var responseError: NSError?
+                    
+                    passport.addIdentity(identity.provider, code: authCode, redirectUri: redirectUri) { result in
+                        responseValue = result.value
+                        responseError = result.error
+                    }
+                    
+                    expect(responseValue).toEventually(equal(identity))
+                    expect(responseError).toEventually(beNil())
+                }
+            }
         }
     }
 }
