@@ -1,4 +1,4 @@
-# Disc
+# Disc [![Build Status](https://travis-ci.org/the-grid/Disc.svg?branch=master)](https://travis-ci.org/the-grid/Disc)
 
 An API client for [Passport](https://passport.thegrid.io).
 
