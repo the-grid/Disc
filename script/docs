@@ -8,3 +8,4 @@ jazzy \
   --module Disc \
   --output Documentation \
   --skip-undocumented \
+  --xcodebuild-arguments -workspace,Disc.xcworkspace,-scheme,Disc-Mac,-sdk,macosx
