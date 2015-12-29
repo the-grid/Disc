@@ -38,8 +38,6 @@
 		2C7405C71BD32B8500243DBD /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7405C51BD32B8500243DBD /* UserSpec.swift */; };
 		2C7405CA1BD32E1A00243DBD /* ScopeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7405C91BD32E1A00243DBD /* ScopeSpec.swift */; };
 		2C7405CB1BD32E1A00243DBD /* ScopeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7405C91BD32E1A00243DBD /* ScopeSpec.swift */; };
-		2C9C58621BD7925500EFCA29 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C58611BD7925500EFCA29 /* OAuthClient.swift */; };
-		2C9C58631BD7925500EFCA29 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C58611BD7925500EFCA29 /* OAuthClient.swift */; };
 		2C9C58671BD793D600EFCA29 /* GetAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C58651BD793D600EFCA29 /* GetAccessToken.swift */; };
 		2C9C58681BD793D600EFCA29 /* GetAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C58651BD793D600EFCA29 /* GetAccessToken.swift */; };
 		2C9C58691BD793D600EFCA29 /* CreateLoginUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C58661BD793D600EFCA29 /* CreateLoginUrl.swift */; };
@@ -142,7 +140,6 @@
 		2C7405C91BD32E1A00243DBD /* ScopeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScopeSpec.swift; path = Models/ScopeSpec.swift; sourceTree = "<group>"; };
 		2C8CAE721BD321EE008F7794 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8CAE731BD321EE008F7794 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C9C58611BD7925500EFCA29 /* OAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthClient.swift; path = Networking/OAuthClient.swift; sourceTree = "<group>"; };
 		2C9C58651BD793D600EFCA29 /* GetAccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAccessToken.swift; sourceTree = "<group>"; };
 		2C9C58661BD793D600EFCA29 /* CreateLoginUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateLoginUrl.swift; sourceTree = "<group>"; };
 		2C9C586B1BD7948A00EFCA29 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = Models/AccessToken.swift; sourceTree = "<group>"; };
@@ -409,7 +406,6 @@
 			isa = PBXGroup;
 			children = (
 				2CF8D64F1BD5B7D1004D4B19 /* APIClient.swift */,
-				2C9C58611BD7925500EFCA29 /* OAuthClient.swift */,
 				2C9C58641BD793D600EFCA29 /* Authorization */,
 				2C9C58971BD7AE6E00EFCA29 /* Helpers */,
 				2CF8D6661BD5D291004D4B19 /* Resources */,
@@ -648,7 +644,6 @@
 				2C565DB41BFCC09200F63711 /* EqualTo.swift in Sources */,
 				2CF8D6761BD5D48D004D4B19 /* DeleteIdentity.swift in Sources */,
 				2C9C586A1BD793D600EFCA29 /* CreateLoginUrl.swift in Sources */,
-				2C9C58631BD7925500EFCA29 /* OAuthClient.swift in Sources */,
 				2CF8D6821BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */,
 				2CF8D6511BD5B7D1004D4B19 /* APIClient.swift in Sources */,
 				2CF8D65F1BD5CE5E004D4B19 /* NSUUID.swift in Sources */,
@@ -701,7 +696,6 @@
 				2C565DB31BFCC09200F63711 /* EqualTo.swift in Sources */,
 				2CF8D6751BD5D48D004D4B19 /* DeleteIdentity.swift in Sources */,
 				2C9C58691BD793D600EFCA29 /* CreateLoginUrl.swift in Sources */,
-				2C9C58621BD7925500EFCA29 /* OAuthClient.swift in Sources */,
 				2CF8D6811BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */,
 				2CF8D6501BD5B7D1004D4B19 /* APIClient.swift in Sources */,
 				2CF8D65E1BD5CE5E004D4B19 /* NSUUID.swift in Sources */,

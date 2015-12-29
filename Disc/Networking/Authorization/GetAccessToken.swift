@@ -20,13 +20,15 @@ private struct GetAccessTokenRequest: Request {
     }
 }
 
-public extension OAuthClient {
+public extension APIClient {
     /// Get an access token using the provided `code`.
     ///
+    /// - parameter clientId: The unique identifier of your application.
+    /// - parameter clientSecret: Your application's passphrase.
     /// - parameter code: The access grant received in the `code` query
     /// parameter of the `redirectUri` that was passed to `init`.
-    func getAccessToken(code: String, completionHandler: Result<AccessToken, NSError> -> Void) {
+    static func getAccessToken(clientId clientId: String, clientSecret: String, code: String, completionHandler: Result<AccessToken, NSError> -> Void) {
         let request = GetAccessTokenRequest(clientId: clientId, clientSecret: clientSecret, code: code)
-        client.performRequest(request, completionHandler: completionHandler)
+        auth.performRequest(request, completionHandler: completionHandler)
     }
 }
