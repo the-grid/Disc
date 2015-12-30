@@ -10,14 +10,6 @@ class GetAccessTokenSpec: QuickSpec {
             it("should result in an access token") {
                 let clientId = "id"
                 let clientSecret = "secret"
-                let redirectUri = "uri://"
-                
-                let oauth = OAuthClient(
-                    clientId: clientId,
-                    clientSecret: clientSecret,
-                    redirectUri: redirectUri
-                )
-                
                 let code = "code"
                 
                 let requestBody = [
@@ -44,7 +36,7 @@ class GetAccessTokenSpec: QuickSpec {
                 var responseValue: AccessToken?
                 var responseError: NSError?
                 
-                oauth.getAccessToken(code) { result in
+                APIClient.getAccessToken(clientId: clientId, clientSecret: clientSecret, code: code) { result in
                     responseValue = result.value
                     responseError = result.error
                 }

@@ -2,6 +2,7 @@ import Swish
 
 /// An API client for Passport.
 public struct APIClient {
+    static let staticClient = Swish.APIClient()
     let client = Swish.APIClient()
     let token: String
     
