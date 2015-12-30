@@ -29,6 +29,6 @@ public extension APIClient {
     /// parameter of the `redirectUri` that was passed to `init`.
     static func getAccessToken(clientId clientId: String, clientSecret: String, code: String, completionHandler: Result<AccessToken, NSError> -> Void) {
         let request = GetAccessTokenRequest(clientId: clientId, clientSecret: clientSecret, code: code)
-        auth.performRequest(request, completionHandler: completionHandler)
+        staticClient.performRequest(request, completionHandler: completionHandler)
     }
 }
