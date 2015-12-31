@@ -5,70 +5,19 @@ private struct AddIdentityRequest: Request {
     typealias ResponseType = Identity
     
     let token: String
-    let provider: Provider
-    let providerAccessToken: String?
-    let providerTokenSecret: String?
-    let authCode: String?
-    let redirectUri: String?
+    let body: [String: String]
     
     init(token: String, provider: Provider, providerAccessToken: String, providerTokenSecret: String?) {
         self.token = token
-        self.provider = provider
-        self.providerAccessToken = providerAccessToken
-        self.providerTokenSecret = providerTokenSecret
-        self.authCode = .None
-        self.redirectUri = .None
+        body = createRequestParameters(provider: provider, token: providerAccessToken, secret: providerTokenSecret)
     }
     
     init(token: String, provider: Provider, authCode: String, redirectUri: String) {
         self.token = token
-        self.provider = provider
-        self.providerAccessToken = .None
-        self.providerTokenSecret = .None
-        self.authCode = authCode
-        self.redirectUri = redirectUri
+        body = createRequestParameters(provider: provider, code: authCode, redirectUri: redirectUri)
     }
     
     func build() -> NSURLRequest {
-        let defaultParameters = [
-            "provider": provider.rawValue
-        ]
-        
-        let tokenParameter: [String: AnyObject]
-        let secretParameter: [String: AnyObject]
-        let authCodeParameter: [String: AnyObject]
-        let redirectUriParameter: [String: AnyObject]
-        
-        if let accessToken = providerAccessToken {
-            tokenParameter = [ "token": accessToken ]
-        } else {
-            tokenParameter = [:]
-        }
-        
-        if let secret = providerTokenSecret {
-            secretParameter = [ "token_secret": secret ]
-        } else {
-            secretParameter = [:]
-        }
-        
-        if let code = authCode {
-            authCodeParameter = [ "code": code ]
-        } else {
-            authCodeParameter = [:]
-        }
-        
-        if let redirect = redirectUri {
-            redirectUriParameter = [ "redirect_uri": redirect ]
-        } else {
-            redirectUriParameter = [:]
-        }
-        
-        let body = defaultParameters
-            + tokenParameter
-            + secretParameter
-            + authCodeParameter
-            + redirectUriParameter
-        
         return createRequest(.POST, "api/user/identities", token: token, body: body)
     }
 }
