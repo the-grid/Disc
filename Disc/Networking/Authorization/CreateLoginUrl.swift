@@ -11,12 +11,7 @@ public extension APIClient {
     /// - parameter scopes: The desired authentication scopes.
     /// - parameter provider: The desired identity provider, if any.
     static func createLoginUrl(clientId clientId: String, redirectUri: String, scopes: [Scope] = [], provider: Provider? = nil) -> NSURL? {
-        let queryItems = [
-            "client_id": clientId,
-            "redirect_uri": redirectUri,
-            "response_type": "code",
-            "scope": scopes.map({ $0.rawValue }).joinWithSeparator(",")
-        ]
+        let queryItems = createRequestParameters(clientId: clientId, redirectUri: redirectUri, scopes: scopes)
         
         let pathComponent: String
         
