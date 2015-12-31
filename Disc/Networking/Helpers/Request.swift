@@ -3,6 +3,9 @@ import Swish
 
 private let baseUrl = NSURL(string: "https://passport.thegrid.io/")!
 
+
+// MARK: - URL
+
 func createUrl(path: String, _ queryItems: [String: String] = [:]) -> NSURL? {
     guard let url = NSURL(string: path, relativeToURL: baseUrl),
         components = NSURLComponents(URL: url, resolvingAgainstBaseURL: true)
@@ -17,6 +20,9 @@ func createUrl(path: String, _ queryItems: [String: String] = [:]) -> NSURL? {
     components.queryItems = queryItems.isEmpty ? nil : queryItems
     return components.URL
 }
+
+
+// MARK: - Request
 
 func createRequest(method: RequestMethod, _ path: String, token: String) -> NSMutableURLRequest {
     let request = createRequest(method, path)
@@ -49,6 +55,9 @@ func createRequest(method: RequestMethod, _ path: String, token: String, body: [
 private func setAuthorizationHeaderForRequest(request: NSMutableURLRequest, token: String) {
     request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 }
+
+
+// MARK: - Request Parameters
 
 private func createRequestParameters(clientId clientId: String) -> [String: String] {
     return [ "client_id": clientId ]
