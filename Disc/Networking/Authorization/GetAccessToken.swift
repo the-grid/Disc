@@ -16,12 +16,12 @@ private struct GetAccessTokenRequest: Request {
     
     init(clientId: String, scopes: [Scope] = [], provider: Provider, token: String, secret: String?) {
         url = GetAccessTokenRequest.authLoginUrl
-        body = createRequestParameters(scopes: scopes, provider: provider, token: token, secret: secret)
+        body = createRequestParameters(clientId: clientId, scopes: scopes, provider: provider, token: token, secret: secret)
     }
     
     init(clientId: String, scopes: [Scope] = [], provider: Provider, code: String, redirectUri: String) {
         url = GetAccessTokenRequest.authLoginUrl
-        body = createRequestParameters(scopes: scopes, provider: provider, code: code, redirectUri: redirectUri)
+        body = createRequestParameters(clientId: clientId, scopes: scopes, provider: provider, code: code, redirectUri: redirectUri)
     }
     
     func build() -> NSURLRequest {

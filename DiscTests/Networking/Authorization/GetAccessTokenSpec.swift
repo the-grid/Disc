@@ -86,6 +86,7 @@ class GetAccessTokenSpec: QuickSpec {
                     context("without scopes") {
                         it("should result in an access token") {
                             let requestBody = [
+                                "client_id": clientId,
                                 "provider": provider.rawValue,
                                 "token": providerAccessToken,
                             ]
@@ -110,6 +111,7 @@ class GetAccessTokenSpec: QuickSpec {
                     context("with scopes") {
                         it("should result in an access token") {
                             let requestBody: [String: AnyObject] = [
+                                "client_id": clientId,
                                 "provider": provider.rawValue,
                                 "scope": "\(scopes.first!.rawValue),\(scopes.last!.rawValue)",
                                 "token": providerAccessToken
@@ -137,6 +139,7 @@ class GetAccessTokenSpec: QuickSpec {
                     context("without scopes") {
                         it("should result in an access token") {
                             let requestBody = [
+                                "client_id": clientId,
                                 "provider": provider.rawValue,
                                 "token": providerAccessToken,
                                 "token_secret": providerTokenSecret
@@ -162,6 +165,7 @@ class GetAccessTokenSpec: QuickSpec {
                     context("with scopes") {
                         it("should result in an access token") {
                             let requestBody: [String: AnyObject] = [
+                                "client_id": clientId,
                                 "provider": provider.rawValue,
                                 "scope": "\(scopes.first!.rawValue),\(scopes.last!.rawValue)",
                                 "token": providerAccessToken,
@@ -190,6 +194,7 @@ class GetAccessTokenSpec: QuickSpec {
                     context("without scopes") {
                         it("should result in an access token") {
                             let requestBody = [
+                                "client_id": clientId,
                                 "provider": provider.rawValue,
                                 "code": providerAuthCode,
                                 "redirect_uri": providerRedirectUri
@@ -215,6 +220,7 @@ class GetAccessTokenSpec: QuickSpec {
                     context("with scopes") {
                         it("should result in an access token") {
                             let requestBody: [String: AnyObject] = [
+                                "client_id": clientId,
                                 "code": providerAuthCode,
                                 "provider": provider.rawValue,
                                 "redirect_uri": providerRedirectUri,
