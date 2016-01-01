@@ -14,16 +14,6 @@ private struct GetAccessTokenRequest: Request {
         body = createRequestParameters(clientId: clientId, clientSecret: clientSecret, code: code)
     }
     
-    init(scopes: [Scope] = [], provider: Provider, token: String, secret: String?) {
-        url = GetAccessTokenRequest.authLoginUrl
-        body = createRequestParameters(scopes: scopes, provider: provider, token: token, secret: secret)
-    }
-    
-    init(scopes: [Scope] = [], provider: Provider, code: String, redirectUri: String) {
-        url = GetAccessTokenRequest.authLoginUrl
-        body = createRequestParameters(scopes: scopes, provider: provider, code: code, redirectUri: redirectUri)
-    }
-    
     init(clientId: String, scopes: [Scope] = [], provider: Provider, token: String, secret: String?) {
         url = GetAccessTokenRequest.authLoginUrl
         body = createRequestParameters(clientId: clientId, scopes: scopes, provider: provider, token: token, secret: secret)

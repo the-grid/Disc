@@ -118,16 +118,10 @@ func createRequestParameters(scopes scopes: [Scope] = [], provider: Provider, co
 
 func createRequestParameters(clientId clientId: String, scopes: [Scope] = [], provider: Provider, token: String, secret: String? = .None) -> [String: String] {
     return createRequestParameters(clientId: clientId)
-        + createRequestParameters(scopes: scopes)
-        + createRequestParameters(provider: provider)
-        + createRequestParameters(token: token)
-        + createRequestParameters(secret: secret)
+        + createRequestParameters(scopes: scopes, provider: provider, token: token, secret: secret)
 }
 
 func createRequestParameters(clientId clientId: String, scopes: [Scope] = [], provider: Provider, code: String, redirectUri: String) -> [String: String] {
     return createRequestParameters(clientId: clientId)
-        + createRequestParameters(scopes: scopes)
-        + createRequestParameters(provider: provider)
-        + createRequestParameters(code: code)
-        + createRequestParameters(redirectUri: redirectUri)
+        + createRequestParameters(scopes: scopes, provider: provider, code: code, redirectUri: redirectUri)
 }
