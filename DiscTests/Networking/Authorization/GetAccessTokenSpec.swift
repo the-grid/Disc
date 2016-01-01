@@ -7,42 +7,237 @@ import Result
 class GetAccessTokenSpec: QuickSpec {
     override func spec() {
         describe("getting an access token") {
-            it("should result in an access token") {
-                let clientId = "id"
-                let clientSecret = "secret"
-                let code = "code"
+            var clientId: String!
+            
+            var value: String!
+            var responseBody: [String: String]!
+            
+            var token: AccessToken!
+            
+            beforeEach {
+                clientId = "id"
                 
-                let requestBody = [
-                    "client_id": clientId,
-                    "client_secret": clientSecret,
-                    "code": code,
-                    "grant_type": "authorization_code"
-                ]
+                value = "token"
                 
-                let value = "token"
-                
-                let responseBody = [
+                responseBody = [
                     "access_token": value
                 ]
                 
-                let token = AccessToken(value: value)
-
-                let url = "https://passport.thegrid.io/login/authorize/token"
+                token = AccessToken(value: value)
+            }
+            
+            context("with a Passport auth code") {
+                it("should result in an access token") {
+                    let clientSecret = "secret"
+                    let code = "code"
+                    
+                    let requestBody = [
+                        "client_id": clientId,
+                        "client_secret": clientSecret,
+                        "code": code,
+                        "grant_type": "authorization_code"
+                    ]
+                    
+                    let url = "https://passport.thegrid.io/login/authorize/token"
+                    
+                    let matcher = api(.POST, url, body: requestBody)
+                    let builder = json(responseBody)
+                    self.stub(matcher, builder: builder)
+                    
+                    var responseValue: AccessToken?
+                    var responseError: NSError?
+                    
+                    APIClient.getAccessToken(clientId: clientId, clientSecret: clientSecret, code: code) { result in
+                        responseValue = result.value
+                        responseError = result.error
+                    }
+                    
+                    expect(responseValue).toEventually(equal(token))
+                    expect(responseError).toEventually(beNil())
+                }
+            }
+            
+            context("with an OAuth provider") {
+                var url: String!
                 
-                let matcher = api(.POST, url, body: requestBody)
-                let builder = json(responseBody)
-                self.stub(matcher, builder: builder)
+                var providerAccessToken: String!
+                var providerTokenSecret: String!
                 
-                var responseValue: AccessToken?
-                var responseError: NSError?
+                var providerAuthCode: String!
+                var providerRedirectUri: String!
                 
-                APIClient.getAccessToken(clientId: clientId, clientSecret: clientSecret, code: code) { result in
-                    responseValue = result.value
-                    responseError = result.error
+                var provider: Provider!
+                var scopes: [Scope]!
+                
+                beforeEach {
+                    url = "https://passport.thegrid.io/api/auth/login"
+                    
+                    providerAccessToken = "provider access token"
+                    providerTokenSecret = "provider token secret"
+                    
+                    providerAuthCode = "provider auth code"
+                    providerRedirectUri = "provider redirect URI"
+                    
+                    provider = .Twitter
+                    scopes = [ .ContentManagement, .UpdateProfile ]
                 }
                 
-                expect(responseValue).toEventually(equal(token))
-                expect(responseError).toEventually(beNil())
+                context("access token") {
+                    context("without scopes") {
+                        it("should result in an access token") {
+                            let requestBody = [
+                                "provider": provider.rawValue,
+                                "token": providerAccessToken,
+                            ]
+                            
+                            let matcher = api(.POST, url, body: requestBody)
+                            let builder = json(responseBody)
+                            self.stub(matcher, builder: builder)
+                            
+                            var responseValue: AccessToken?
+                            var responseError: NSError?
+                            
+                            APIClient.getAccessToken(clientId: clientId, provider: provider, token: providerAccessToken) { result in
+                                responseValue = result.value
+                                responseError = result.error
+                            }
+                            
+                            expect(responseValue).toEventually(equal(token))
+                            expect(responseError).toEventually(beNil())
+                        }
+                    }
+                    
+                    context("with scopes") {
+                        it("should result in an access token") {
+                            let requestBody: [String: AnyObject] = [
+                                "provider": provider.rawValue,
+                                "scope": "\(scopes.first!.rawValue),\(scopes.last!.rawValue)",
+                                "token": providerAccessToken
+                            ]
+                            
+                            let matcher = api(.POST, url, body: requestBody)
+                            let builder = json(responseBody)
+                            self.stub(matcher, builder: builder)
+                            
+                            var responseValue: AccessToken?
+                            var responseError: NSError?
+                            
+                            APIClient.getAccessToken(clientId: clientId, scopes: scopes, provider: provider, token: providerAccessToken) { result in
+                                responseValue = result.value
+                                responseError = result.error
+                            }
+                            
+                            expect(responseValue).toEventually(equal(token))
+                            expect(responseError).toEventually(beNil())
+                        }
+                    }
+                }
+                
+                context("access token and secret") {
+                    context("without scopes") {
+                        it("should result in an access token") {
+                            let requestBody = [
+                                "provider": provider.rawValue,
+                                "token": providerAccessToken,
+                                "token_secret": providerTokenSecret
+                            ]
+                            
+                            let matcher = api(.POST, url, body: requestBody)
+                            let builder = json(responseBody)
+                            self.stub(matcher, builder: builder)
+                            
+                            var responseValue: AccessToken?
+                            var responseError: NSError?
+                            
+                            APIClient.getAccessToken(clientId: clientId, provider: provider, token: providerAccessToken, secret: providerTokenSecret) { result in
+                                responseValue = result.value
+                                responseError = result.error
+                            }
+                            
+                            expect(responseValue).toEventually(equal(token))
+                            expect(responseError).toEventually(beNil())
+                        }
+                    }
+                    
+                    context("with scopes") {
+                        it("should result in an access token") {
+                            let requestBody: [String: AnyObject] = [
+                                "provider": provider.rawValue,
+                                "scope": "\(scopes.first!.rawValue),\(scopes.last!.rawValue)",
+                                "token": providerAccessToken,
+                                "token_secret": providerTokenSecret
+                            ]
+                            
+                            let matcher = api(.POST, url, body: requestBody)
+                            let builder = json(responseBody)
+                            self.stub(matcher, builder: builder)
+                            
+                            var responseValue: AccessToken?
+                            var responseError: NSError?
+                            
+                            APIClient.getAccessToken(clientId: clientId, scopes: scopes, provider: provider, token: providerAccessToken, secret: providerTokenSecret) { result in
+                                responseValue = result.value
+                                responseError = result.error
+                            }
+                            
+                            expect(responseValue).toEventually(equal(token))
+                            expect(responseError).toEventually(beNil())
+                        }
+                    }
+                }
+                
+                context("auth code and redirect URI") {
+                    context("without scopes") {
+                        it("should result in an access token") {
+                            let requestBody = [
+                                "provider": provider.rawValue,
+                                "code": providerAuthCode,
+                                "redirect_uri": providerRedirectUri
+                            ]
+                            
+                            let matcher = api(.POST, url, body: requestBody)
+                            let builder = json(responseBody)
+                            self.stub(matcher, builder: builder)
+                            
+                            var responseValue: AccessToken?
+                            var responseError: NSError?
+                            
+                            APIClient.getAccessToken(clientId: clientId, provider: provider, code: providerAuthCode, redirectUri: providerRedirectUri) { result in
+                                responseValue = result.value
+                                responseError = result.error
+                            }
+                            
+                            expect(responseValue).toEventually(equal(token))
+                            expect(responseError).toEventually(beNil())
+                        }
+                    }
+                    
+                    context("with scopes") {
+                        it("should result in an access token") {
+                            let requestBody: [String: AnyObject] = [
+                                "code": providerAuthCode,
+                                "provider": provider.rawValue,
+                                "redirect_uri": providerRedirectUri,
+                                "scope": "\(scopes.first!.rawValue),\(scopes.last!.rawValue)"
+                            ]
+                            
+                            let matcher = api(.POST, url, body: requestBody)
+                            let builder = json(responseBody)
+                            self.stub(matcher, builder: builder)
+                            
+                            var responseValue: AccessToken?
+                            var responseError: NSError?
+                            
+                            APIClient.getAccessToken(clientId: clientId, scopes: scopes, provider: provider, code: providerAuthCode, redirectUri: providerRedirectUri) { result in
+                                responseValue = result.value
+                                responseError = result.error
+                            }
+                            
+                            expect(responseValue).toEventually(equal(token))
+                            expect(responseError).toEventually(beNil())
+                        }
+                    }
+                }
             }
         }
     }

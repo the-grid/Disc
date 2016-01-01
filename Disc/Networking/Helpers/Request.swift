@@ -3,6 +3,9 @@ import Swish
 
 private let baseUrl = NSURL(string: "https://passport.thegrid.io/")!
 
+
+// MARK: - URL
+
 func createUrl(path: String, _ queryItems: [String: String] = [:]) -> NSURL? {
     guard let url = NSURL(string: path, relativeToURL: baseUrl),
         components = NSURLComponents(URL: url, resolvingAgainstBaseURL: true)
@@ -17,6 +20,9 @@ func createUrl(path: String, _ queryItems: [String: String] = [:]) -> NSURL? {
     components.queryItems = queryItems.isEmpty ? nil : queryItems
     return components.URL
 }
+
+
+// MARK: - Request
 
 func createRequest(method: RequestMethod, _ path: String, token: String) -> NSMutableURLRequest {
     let request = createRequest(method, path)
@@ -48,4 +54,64 @@ func createRequest(method: RequestMethod, _ path: String, token: String, body: [
 
 private func setAuthorizationHeaderForRequest(request: NSMutableURLRequest, token: String) {
     request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+}
+
+
+// MARK: - Request Parameters
+
+private func createRequestParameters(clientId clientId: String) -> [String: String] {
+    return [ "client_id": clientId ]
+}
+
+private func createRequestParameters(code code: String) -> [String: String] {
+    return [ "code": code ]
+}
+
+private func createRequestParameters(provider provider: Provider) -> [String: String] {
+    return [ "provider": provider.rawValue ]
+}
+
+private func createRequestParameters(redirectUri redirectUri: String) -> [String: String] {
+    return [ "redirect_uri": redirectUri ]
+}
+
+private func createRequestParameters(secret secret: String?) -> [String: String] {
+    guard let secret = secret else { return [:] }
+    return [ "token_secret": secret ]
+}
+
+private func createRequestParameters(scopes scopes: [Scope]) -> [String: String] {
+    guard !scopes.isEmpty else { return [:] }
+    return [ "scope": scopes.map({ $0.rawValue }).joinWithSeparator(",") ]
+}
+
+private func createRequestParameters(token token: String) -> [String: String] {
+    return [ "token": token ]
+}
+
+func createRequestParameters(clientId clientId: String, redirectUri: String, scopes: [Scope]) -> [String: String] {
+    return createRequestParameters(clientId: clientId)
+        + createRequestParameters(scopes: scopes)
+        + createRequestParameters(redirectUri: redirectUri)
+        + [ "response_type": "code" ]
+}
+
+func createRequestParameters(clientId clientId: String, clientSecret: String, code: String) -> [String: String] {
+    return createRequestParameters(clientId: clientId)
+        + createRequestParameters(code: code)
+        + [ "client_secret": clientSecret, "grant_type": "authorization_code" ]
+}
+
+func createRequestParameters(scopes scopes: [Scope] = [], provider: Provider, token: String, secret: String? = .None) -> [String: String] {
+    return createRequestParameters(scopes: scopes)
+        + createRequestParameters(provider: provider)
+        + createRequestParameters(token: token)
+        + createRequestParameters(secret: secret)
+}
+
+func createRequestParameters(scopes scopes: [Scope] = [], provider: Provider, code: String, redirectUri: String) -> [String: String] {
+    return createRequestParameters(scopes: scopes)
+        + createRequestParameters(provider: provider)
+        + createRequestParameters(code: code)
+        + createRequestParameters(redirectUri: redirectUri)
 }

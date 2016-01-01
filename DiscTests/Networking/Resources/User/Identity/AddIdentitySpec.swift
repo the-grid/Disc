@@ -54,7 +54,7 @@ class AddIdentitySpec: QuickSpec {
                 )
             }
             
-            context("providing only an access token") {
+            context("with only an access token") {
                 it("should result in an identity") {
                     let requestBody = [
                         "provider": provider,
@@ -78,7 +78,7 @@ class AddIdentitySpec: QuickSpec {
                 }
             }
             
-            context("providing a token secret") {
+            context("with an access token and secret") {
                 it("should result in an identity") {
                     let providerTokenSecret = "provider token secret"
                     
@@ -105,7 +105,7 @@ class AddIdentitySpec: QuickSpec {
                 }
             }
             
-            context("providing an auth code and redirect URI") {
+            context("with an auth code and redirect URI") {
                 it("should result in an identity") {
                     let authCode = "provider auth code"
                     let redirectUri = "redirect URI"

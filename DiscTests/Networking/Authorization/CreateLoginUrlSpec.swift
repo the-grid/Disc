@@ -6,7 +6,6 @@ class CreateLoginUrlSpec: QuickSpec {
     override func spec() {
         describe("creating a login URL") {
             let clientId = "id"
-            let clientSecret = "secret"
             let redirectUri = "uri://"
             
             context("not specifying scopes or a provider") {
@@ -17,7 +16,6 @@ class CreateLoginUrlSpec: QuickSpec {
                         + "?client_id=\(clientId)"
                         + "&redirect_uri=\(redirectUri)"
                         + "&response_type=code"
-                        + "&scope="
                     
                     let expectedUrl = NSURL(string: expectedUrlString)
                     
@@ -34,7 +32,6 @@ class CreateLoginUrlSpec: QuickSpec {
                         + "?client_id=\(clientId)"
                         + "&redirect_uri=\(redirectUri)"
                         + "&response_type=code"
-                        + "&scope="
                     
                     let expectedUrl = NSURL(string: expectedUrlString)
                     expect(url).to(equal(expectedUrl))
