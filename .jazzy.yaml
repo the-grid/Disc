@@ -10,4 +10,3 @@ custom_categories:
   - name: Networking
     children:
     - APIClient
-    - OAuthClient
