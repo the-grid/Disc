@@ -1,5 +1,6 @@
 import Disc
 import Mockingjay
+import MockingjayMatchers
 import Nimble
 import Quick
 import Result

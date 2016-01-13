@@ -98,6 +98,20 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2CD395201C44654A0004D6B7"
+               BuildableName = "MockingjayMatchers.framework"
+               BlueprintName = "MockingjayMatchers-Mac"
+               ReferencedContainer = "container:Carthage/Checkouts/MockingjayMatchers/MockingjayMatchers.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "1F925EAC195C0D6300ED456B"
                BuildableName = "Nimble.framework"
                BlueprintName = "Nimble-OSX"
