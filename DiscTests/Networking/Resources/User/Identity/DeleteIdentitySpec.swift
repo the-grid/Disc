@@ -26,7 +26,7 @@ class DeleteIdentitySpec: QuickSpec {
                     responseError = result.error
                 }
                 
-                expect(responseValue).toEventually(beNil())
+                expect(responseValue).toEventually(beVoid())
                 expect(responseError).toEventually(beNil())
             }
         }

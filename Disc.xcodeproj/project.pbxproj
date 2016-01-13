@@ -22,6 +22,8 @@
 		2C1CBAB81BD336D200F1E3E1 /* IdentitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */; };
 		2C1CBABA1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */; };
 		2C1CBABB1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */; };
+		2C42DA251C4718FB00CD838A /* NimbleMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42DA241C4718FB00CD838A /* NimbleMatchers.swift */; };
+		2C42DA261C4718FB00CD838A /* NimbleMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42DA241C4718FB00CD838A /* NimbleMatchers.swift */; };
 		2C565DB11BFCC09200F63711 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DAE1BFCC09200F63711 /* Curry.swift */; };
 		2C565DB21BFCC09200F63711 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DAE1BFCC09200F63711 /* Curry.swift */; };
 		2C565DB31BFCC09200F63711 /* EqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DB01BFCC09200F63711 /* EqualTo.swift */; };
@@ -129,6 +131,7 @@
 		2C1CBAB31BD336B700F1E3E1 /* ProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProviderSpec.swift; path = Models/ProviderSpec.swift; sourceTree = "<group>"; };
 		2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdentitySpec.swift; path = Models/IdentitySpec.swift; sourceTree = "<group>"; };
 		2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubTokenSpec.swift; path = Models/GitHubTokenSpec.swift; sourceTree = "<group>"; };
+		2C42DA241C4718FB00CD838A /* NimbleMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NimbleMatchers.swift; path = Helpers/NimbleMatchers.swift; sourceTree = "<group>"; };
 		2C565DAE1BFCC09200F63711 /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
 		2C565DB01BFCC09200F63711 /* EqualTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualTo.swift; sourceTree = "<group>"; };
 		2C565DB51BFCC25500F63711 /* Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
@@ -392,6 +395,7 @@
 				2CF8B7D31C470B1B001C4D95 /* MockingjayMatchers.framework */,
 				2C8CAE721BD321EE008F7794 /* Nimble.framework */,
 				2C8CAE731BD321EE008F7794 /* Quick.framework */,
+				2C42DA241C4718FB00CD838A /* NimbleMatchers.swift */,
 			);
 			path = DiscTests;
 			sourceTree = "<group>";
@@ -672,6 +676,7 @@
 				2C9C588E1BD79C3400EFCA29 /* DeleteIdentitySpec.swift in Sources */,
 				2C7405CB1BD32E1A00243DBD /* ScopeSpec.swift in Sources */,
 				2C9C588B1BD79C3400EFCA29 /* GetUserSpec.swift in Sources */,
+				2C42DA261C4718FB00CD838A /* NimbleMatchers.swift in Sources */,
 				2C08E2261BFB64B9007A631D /* AddIdentitySpec.swift in Sources */,
 				2C1CBABB1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */,
 			);
@@ -723,6 +728,7 @@
 				2C9C58891BD79C3300EFCA29 /* DeleteIdentitySpec.swift in Sources */,
 				2C7405CA1BD32E1A00243DBD /* ScopeSpec.swift in Sources */,
 				2C9C58861BD79C3300EFCA29 /* GetUserSpec.swift in Sources */,
+				2C42DA251C4718FB00CD838A /* NimbleMatchers.swift in Sources */,
 				2C08E2271BFB64BA007A631D /* AddIdentitySpec.swift in Sources */,
 				2C1CBABA1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */,
 			);
