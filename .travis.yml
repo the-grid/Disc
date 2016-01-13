@@ -5,5 +5,5 @@ git:
 before_install:
   - brew update
   - brew install carthage
-install: script/update
+install: script/install
 script: script/test
