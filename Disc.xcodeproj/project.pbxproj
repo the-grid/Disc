@@ -22,8 +22,8 @@
 		2C1CBAB81BD336D200F1E3E1 /* IdentitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */; };
 		2C1CBABA1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */; };
 		2C1CBABB1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */; };
-		2C32376F1BD701BF00C8F7DC /* MockingjayMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */; };
-		2C3237701BD701C000C8F7DC /* MockingjayMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */; };
+		2C42DA251C4718FB00CD838A /* NimbleMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42DA241C4718FB00CD838A /* NimbleMatchers.swift */; };
+		2C42DA261C4718FB00CD838A /* NimbleMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42DA241C4718FB00CD838A /* NimbleMatchers.swift */; };
 		2C565DB11BFCC09200F63711 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DAE1BFCC09200F63711 /* Curry.swift */; };
 		2C565DB21BFCC09200F63711 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DAE1BFCC09200F63711 /* Curry.swift */; };
 		2C565DB31BFCC09200F63711 /* EqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C565DB01BFCC09200F63711 /* EqualTo.swift */; };
@@ -83,6 +83,8 @@
 		2CEBFC511BD21E8700C00DFF /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEFBDDE1BD21DE800B62F3C /* Argo.framework */; };
 		2CEE1A581BD2F28000D014B7 /* Ogra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C095B671BD2F104009E297C /* Ogra.framework */; };
 		2CEFBDE01BD21DE800B62F3C /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEFBDDE1BD21DE800B62F3C /* Argo.framework */; };
+		2CF8B7D41C470B1B001C4D95 /* MockingjayMatchers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF8B7D31C470B1B001C4D95 /* MockingjayMatchers.framework */; };
+		2CF8B7D51C470B2B001C4D95 /* MockingjayMatchers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF8B7D31C470B1B001C4D95 /* MockingjayMatchers.framework */; };
 		2CF8D6491BD5B616004D4B19 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9821BD5B2BA006B4C96 /* Result.framework */; };
 		2CF8D64A1BD5B64F004D4B19 /* Swish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6DC9831BD5B2BA006B4C96 /* Swish.framework */; };
 		2CF8D6501BD5B7D1004D4B19 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D64F1BD5B7D1004D4B19 /* APIClient.swift */; };
@@ -129,7 +131,7 @@
 		2C1CBAB31BD336B700F1E3E1 /* ProviderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProviderSpec.swift; path = Models/ProviderSpec.swift; sourceTree = "<group>"; };
 		2C1CBAB61BD336D200F1E3E1 /* IdentitySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdentitySpec.swift; path = Models/IdentitySpec.swift; sourceTree = "<group>"; };
 		2C1CBAB91BD336E800F1E3E1 /* GitHubTokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubTokenSpec.swift; path = Models/GitHubTokenSpec.swift; sourceTree = "<group>"; };
-		2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockingjayMatchers.swift; path = Helpers/MockingjayMatchers.swift; sourceTree = "<group>"; };
+		2C42DA241C4718FB00CD838A /* NimbleMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NimbleMatchers.swift; path = Helpers/NimbleMatchers.swift; sourceTree = "<group>"; };
 		2C565DAE1BFCC09200F63711 /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
 		2C565DB01BFCC09200F63711 /* EqualTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualTo.swift; sourceTree = "<group>"; };
 		2C565DB51BFCC25500F63711 /* Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		2CD2FE151BD212AC00F25308 /* Disc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Disc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD2FE1E1BD212AC00F25308 /* Disc-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Disc-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEFBDDE1BD21DE800B62F3C /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Argo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF8B7D31C470B1B001C4D95 /* MockingjayMatchers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MockingjayMatchers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF8D64F1BD5B7D1004D4B19 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = Networking/APIClient.swift; sourceTree = "<group>"; };
 		2CF8D65A1BD5CE5E004D4B19 /* NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURL.swift; sourceTree = "<group>"; };
 		2CF8D65B1BD5CE5E004D4B19 /* NSUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUUID.swift; sourceTree = "<group>"; };
@@ -191,8 +194,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C61A3A01BD727E70087B295 /* Mockingjay.framework in Frameworks */,
 				2CD2FE011BD2128800F25308 /* Disc.framework in Frameworks */,
+				2C61A3A01BD727E70087B295 /* Mockingjay.framework in Frameworks */,
+				2CF8B7D41C470B1B001C4D95 /* MockingjayMatchers.framework in Frameworks */,
 				2C9FFDCB1BD3238F002FCDB7 /* Nimble.framework in Frameworks */,
 				2C9FFDCC1BD3238F002FCDB7 /* Quick.framework in Frameworks */,
 			);
@@ -215,6 +219,7 @@
 			files = (
 				2CD2FE1F1BD212AD00F25308 /* Disc.framework in Frameworks */,
 				2C6B9F591BD632DC00691774 /* Mockingjay.framework in Frameworks */,
+				2CF8B7D51C470B2B001C4D95 /* MockingjayMatchers.framework in Frameworks */,
 				2C9FFDC91BD3238E002FCDB7 /* Nimble.framework in Frameworks */,
 				2C9FFDCA1BD3238E002FCDB7 /* Quick.framework in Frameworks */,
 			);
@@ -230,14 +235,6 @@
 				2C9C58731BD79C1700EFCA29 /* Resources */,
 			);
 			name = Networking;
-			sourceTree = "<group>";
-		};
-		2C32376E1BD701B100C8F7DC /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				2C32376B1BD701AC00C8F7DC /* MockingjayMatchers.swift */,
-			);
-			name = Helpers;
 			sourceTree = "<group>";
 		};
 		2C565DAD1BFCC09200F63711 /* Functions */ = {
@@ -392,12 +389,13 @@
 			isa = PBXGroup;
 			children = (
 				2CD2FE071BD2128800F25308 /* Info.plist */,
-				2C32376E1BD701B100C8F7DC /* Helpers */,
 				2C7405C81BD32B8B00243DBD /* Models */,
 				2C11E2341BD60666008CFCC1 /* Networking */,
 				2C6B9F581BD632DC00691774 /* Mockingjay.framework */,
+				2CF8B7D31C470B1B001C4D95 /* MockingjayMatchers.framework */,
 				2C8CAE721BD321EE008F7794 /* Nimble.framework */,
 				2C8CAE731BD321EE008F7794 /* Quick.framework */,
+				2C42DA241C4718FB00CD838A /* NimbleMatchers.swift */,
 			);
 			path = DiscTests;
 			sourceTree = "<group>";
@@ -667,7 +665,6 @@
 			files = (
 				2C9C58921BD79C9E00EFCA29 /* CreateLoginUrlSpec.swift in Sources */,
 				2C9C58961BD79CC700EFCA29 /* GetAccessTokenSpec.swift in Sources */,
-				2C3237701BD701C000C8F7DC /* MockingjayMatchers.swift in Sources */,
 				2C08E21C1BFB5FA6007A631D /* GetIdentitySpec.swift in Sources */,
 				2C7405C71BD32B8500243DBD /* UserSpec.swift in Sources */,
 				2C9C588C1BD79C3400EFCA29 /* GetPrivateGitHubTokenSpec.swift in Sources */,
@@ -679,6 +676,7 @@
 				2C9C588E1BD79C3400EFCA29 /* DeleteIdentitySpec.swift in Sources */,
 				2C7405CB1BD32E1A00243DBD /* ScopeSpec.swift in Sources */,
 				2C9C588B1BD79C3400EFCA29 /* GetUserSpec.swift in Sources */,
+				2C42DA261C4718FB00CD838A /* NimbleMatchers.swift in Sources */,
 				2C08E2261BFB64B9007A631D /* AddIdentitySpec.swift in Sources */,
 				2C1CBABB1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */,
 			);
@@ -719,7 +717,6 @@
 			files = (
 				2C9C58911BD79C9E00EFCA29 /* CreateLoginUrlSpec.swift in Sources */,
 				2C9C58951BD79CC700EFCA29 /* GetAccessTokenSpec.swift in Sources */,
-				2C32376F1BD701BF00C8F7DC /* MockingjayMatchers.swift in Sources */,
 				2C08E21B1BFB5FA6007A631D /* GetIdentitySpec.swift in Sources */,
 				2C7405C61BD32B8500243DBD /* UserSpec.swift in Sources */,
 				2C9C58871BD79C3300EFCA29 /* GetPrivateGitHubTokenSpec.swift in Sources */,
@@ -731,6 +728,7 @@
 				2C9C58891BD79C3300EFCA29 /* DeleteIdentitySpec.swift in Sources */,
 				2C7405CA1BD32E1A00243DBD /* ScopeSpec.swift in Sources */,
 				2C9C58861BD79C3300EFCA29 /* GetUserSpec.swift in Sources */,
+				2C42DA251C4718FB00CD838A /* NimbleMatchers.swift in Sources */,
 				2C08E2271BFB64BA007A631D /* AddIdentitySpec.swift in Sources */,
 				2C1CBABA1BD336E800F1E3E1 /* GitHubTokenSpec.swift in Sources */,
 			);

@@ -1,5 +1,6 @@
 import Disc
 import Mockingjay
+import MockingjayMatchers
 import Nimble
 import Quick
 import Result
@@ -25,7 +26,7 @@ class DeleteIdentitySpec: QuickSpec {
                     responseError = result.error
                 }
                 
-                expect(responseValue).toEventually(beNil())
+                expect(responseValue).toEventually(beVoid())
                 expect(responseError).toEventually(beNil())
             }
         }
