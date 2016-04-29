@@ -24,6 +24,11 @@ private struct GetAccessTokenRequest: Request {
         body = createRequestParameters(clientId: clientId, scopes: scopes, provider: provider, code: code, redirectUri: redirectUri)
     }
     
+    init(clientId: String, scopes: [Scope] = [], provider: Provider, token: String, userId: String) {
+        url = GetAccessTokenRequest.authLoginUrl
+        body = createRequestParameters(clientId: clientId, scopes: scopes, provider: provider, token: token, userId: userId)
+    }
+    
     func build() -> NSURLRequest {
         return createRequest(.POST, url, body: body)
     }
@@ -62,6 +67,18 @@ public extension APIClient {
     /// - parameter redirectUri: The redirect URI for the `provider`.
     static func getAccessToken(clientId clientId: String, scopes: [Scope] = [], provider: Provider, code: String, redirectUri: String, completionHandler: Result<AccessToken, NSError> -> Void) {
         let request = GetAccessTokenRequest(clientId: clientId, scopes: scopes, provider: provider, code: code, redirectUri: redirectUri)
+        staticClient.performRequest(request, completionHandler: completionHandler)
+    }
+    
+    /// Get a Passport access token using a token and user id.
+    ///
+    /// - parameter clientId: The unique identifier of your application.
+    /// - parameter scopes: The desired authentication scopes.
+    /// - parameter provider: The OAuth provider.
+    /// - parameter token: The access token for the `provider`.
+    /// - parameter userId: The UUID of the user.
+    static func getAccessToken(clientId clientId: String, scopes: [Scope] = [], provider: Provider, token: String, userId: String, completionHandler: Result<AccessToken, NSError> -> Void) {
+        let request = GetAccessTokenRequest(clientId: clientId, scopes: scopes, provider: provider, token: token, userId: userId)
         staticClient.performRequest(request, completionHandler: completionHandler)
     }
 }

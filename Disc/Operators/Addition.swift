@@ -1,7 +1,8 @@
-func + <T, U>(var lhs: [T: U], rhs: [T: U]) -> [T: U] {
+func + <T, U>( lhs: [T: U], rhs: [T: U]) -> [T: U] {
+    var nlhs = lhs
     for (key, val) in rhs {
-        lhs[key] = val
+        nlhs[key] = val
     }
     
-    return lhs
+    return nlhs
 }
