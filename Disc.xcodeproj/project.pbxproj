@@ -103,6 +103,8 @@
 		2CF8D67E1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D67C1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift */; };
 		2CF8D6811BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */; };
 		2CF8D6821BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */; };
+		76D9B8CA1CD3487D001A8ADF /* RequestEmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9B8C91CD3487D001A8ADF /* RequestEmailLogin.swift */; };
+		76D9B8CB1CD3487D001A8ADF /* RequestEmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9B8C91CD3487D001A8ADF /* RequestEmailLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +178,7 @@
 		2CF8D6741BD5D48D004D4B19 /* GetIdentities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIdentities.swift; sourceTree = "<group>"; };
 		2CF8D67C1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPublicGitHubToken.swift; path = GitHubToken/GetPublicGitHubToken.swift; sourceTree = "<group>"; };
 		2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPrivateGitHubToken.swift; path = GitHubToken/GetPrivateGitHubToken.swift; sourceTree = "<group>"; };
+		76D9B8C91CD3487D001A8ADF /* RequestEmailLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEmailLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +275,7 @@
 			children = (
 				2C9C58661BD793D600EFCA29 /* CreateLoginUrl.swift */,
 				2C9C58651BD793D600EFCA29 /* GetAccessToken.swift */,
+				76D9B8C91CD3487D001A8ADF /* RequestEmailLogin.swift */,
 			);
 			name = Authorization;
 			path = Networking/Authorization;
@@ -653,6 +657,7 @@
 				2CCF4A3E1BD223F9006800E6 /* User.swift in Sources */,
 				2C9C589A1BD7AE6E00EFCA29 /* Request.swift in Sources */,
 				2CF8D67E1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift in Sources */,
+				76D9B8CB1CD3487D001A8ADF /* RequestEmailLogin.swift in Sources */,
 				2C9C586D1BD7948A00EFCA29 /* AccessToken.swift in Sources */,
 				2C08E21F1BFB619C007A631D /* GetIdentity.swift in Sources */,
 				2C08E2251BFB6368007A631D /* AddIdentity.swift in Sources */,
@@ -705,6 +710,7 @@
 				2CCF4A3D1BD223F9006800E6 /* User.swift in Sources */,
 				2C9C58991BD7AE6E00EFCA29 /* Request.swift in Sources */,
 				2CF8D67D1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift in Sources */,
+				76D9B8CA1CD3487D001A8ADF /* RequestEmailLogin.swift in Sources */,
 				2C9C586C1BD7948A00EFCA29 /* AccessToken.swift in Sources */,
 				2C08E21E1BFB619C007A631D /* GetIdentity.swift in Sources */,
 				2C08E2241BFB6368007A631D /* AddIdentity.swift in Sources */,

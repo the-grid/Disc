@@ -89,6 +89,14 @@ private func createRequestParameters(token token: String) -> [String: String] {
     return [ "token": token ]
 }
 
+private func createRequestParameters(userId userId: String) -> [String: String] {
+    return [ "user": userId ]
+}
+
+private func createRequestParameters(email email: String) -> [String: String] {
+    return [ "email": email ]
+}
+
 func createRequestParameters(clientId clientId: String, redirectUri: String, scopes: [Scope]) -> [String: String] {
     return createRequestParameters(clientId: clientId)
         + createRequestParameters(scopes: scopes)
@@ -125,3 +133,17 @@ func createRequestParameters(clientId clientId: String, scopes: [Scope] = [], pr
     return createRequestParameters(clientId: clientId)
         + createRequestParameters(scopes: scopes, provider: provider, code: code, redirectUri: redirectUri)
 }
+
+func createRequestParameters(clientId clientId: String, scopes: [Scope] = [], provider: Provider, token: String, userId: String) -> [String: String] {
+    return createRequestParameters(clientId: clientId)
+        + createRequestParameters(scopes: scopes)
+        + createRequestParameters(provider: provider)
+        + createRequestParameters(token: token)
+        + createRequestParameters(userId: userId)
+}
+
+func createRequestParameters(clientId clientId: String, email: String) -> [String: String] {
+    return createRequestParameters(clientId: clientId)
+        + createRequestParameters(email: email)
+}
+

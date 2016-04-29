@@ -9,7 +9,7 @@ class GetAccessTokenSpec: QuickSpec {
     override func spec() {
         describe("getting an access token") {
             var clientId: String!
-            
+            var userId: String!
             var value: String!
             var responseBody: [String: String]!
             
@@ -17,7 +17,7 @@ class GetAccessTokenSpec: QuickSpec {
             
             beforeEach {
                 clientId = "id"
-                
+                userId = "id"
                 value = "token"
                 
                 responseBody = [
@@ -126,6 +126,35 @@ class GetAccessTokenSpec: QuickSpec {
                             var responseError: NSError?
                             
                             APIClient.getAccessToken(clientId: clientId, scopes: scopes, provider: provider, token: providerAccessToken) { result in
+                                responseValue = result.value
+                                responseError = result.error
+                            }
+                            
+                            expect(responseValue).toEventually(equal(token))
+                            expect(responseError).toEventually(beNil())
+                        }
+                    }
+                }
+                
+                context("access token and userId") {
+                    context("with scopes") {
+                        it("should result in an access token") {
+                            let requestBody = [
+                                "client_id": clientId,
+                                "scope": "\(scopes.first!.rawValue),\(scopes.last!.rawValue)",
+                                "provider": provider.rawValue,
+                                "token": providerAccessToken,
+                                "user": userId
+                            ]
+                            
+                            let matcher = api(.POST, url, body: requestBody)
+                            let builder = json(responseBody)
+                            self.stub(matcher, builder: builder)
+                            
+                            var responseValue: AccessToken?
+                            var responseError: NSError?
+                            
+                            APIClient.getAccessToken(clientId: clientId, scopes: scopes, provider: provider, token: providerAccessToken, userId: userId) { result in
                                 responseValue = result.value
                                 responseError = result.error
                             }
