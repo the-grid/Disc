@@ -9,6 +9,7 @@ public enum Provider: String {
     case GitHubPublic = "github_public"
     case GitHubPrivate = "github_private"
     case Twitter = "twitter"
+    case Email = "email"
 }
 
 
