@@ -12,7 +12,7 @@ private struct GetIdentitiesRequest: Request {
 
 public extension APIClient {
     /// Get the identities for the current user.
-    func getIdentities(completionHandler: Result<[Identity], NSError> -> Void) {
+    func getIdentities(completionHandler: Result<[Identity], SwishError> -> Void) {
         let request = GetIdentitiesRequest(token: token)
         client.performRequest(request, completionHandler: completionHandler)
     }

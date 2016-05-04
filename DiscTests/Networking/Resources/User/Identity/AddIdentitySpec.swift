@@ -67,7 +67,7 @@ class AddIdentitySpec: QuickSpec {
                     self.stub(matcher, builder: builder)
                     
                     var responseValue: Identity?
-                    var responseError: NSError?
+                    var responseError: SwishError?
                     
                     passport.addIdentity(identity.provider, token: providerAccessToken) { result in
                         responseValue = result.value
@@ -94,7 +94,7 @@ class AddIdentitySpec: QuickSpec {
                     self.stub(matcher, builder: builder)
                     
                     var responseValue: Identity?
-                    var responseError: NSError?
+                    var responseError: SwishError?
                     
                     passport.addIdentity(identity.provider, token: providerAccessToken, secret: providerTokenSecret) { result in
                         responseValue = result.value
@@ -122,7 +122,7 @@ class AddIdentitySpec: QuickSpec {
                     self.stub(matcher, builder: builder)
                     
                     var responseValue: Identity?
-                    var responseError: NSError?
+                    var responseError: SwishError?
                     
                     passport.addIdentity(identity.provider, code: authCode, redirectUri: redirectUri) { result in
                         responseValue = result.value

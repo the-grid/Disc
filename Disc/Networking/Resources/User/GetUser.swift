@@ -27,7 +27,7 @@ private struct GetUserRequest: Request {
 
 public extension APIClient {
     /// Get the current user.
-    func getUser(completionHandler: Result<User, NSError> -> Void) {
+    func getUser(completionHandler: Result<User, SwishError> -> Void) {
         let request = GetUserRequest(token: token)
         client.performRequest(request, completionHandler: completionHandler)
     }
@@ -35,7 +35,7 @@ public extension APIClient {
     /// Get the user with the provided `id`.
     ///
     /// - parameter id: The ID of the user.
-    func getUser(id: String, completionHandler: Result<User, NSError> -> Void) {
+    func getUser(id: String, completionHandler: Result<User, SwishError> -> Void) {
         let request = GetUserRequest(token: token, id: id)
         client.performRequest(request, completionHandler: completionHandler)
     }

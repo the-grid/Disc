@@ -46,7 +46,7 @@ class GetAccessTokenSpec: QuickSpec {
                     self.stub(matcher, builder: builder)
                     
                     var responseValue: AccessToken?
-                    var responseError: NSError?
+                    var responseError: SwishError?
                     
                     APIClient.getAccessToken(clientId: clientId, clientSecret: clientSecret, code: code) { result in
                         responseValue = result.value
@@ -97,7 +97,7 @@ class GetAccessTokenSpec: QuickSpec {
                             self.stub(matcher, builder: builder)
                             
                             var responseValue: AccessToken?
-                            var responseError: NSError?
+                            var responseError: SwishError?
                             
                             APIClient.getAccessToken(clientId: clientId, provider: provider, token: providerAccessToken) { result in
                                 responseValue = result.value
@@ -123,7 +123,7 @@ class GetAccessTokenSpec: QuickSpec {
                             self.stub(matcher, builder: builder)
                             
                             var responseValue: AccessToken?
-                            var responseError: NSError?
+                            var responseError: SwishError?
                             
                             APIClient.getAccessToken(clientId: clientId, scopes: scopes, provider: provider, token: providerAccessToken) { result in
                                 responseValue = result.value
@@ -152,7 +152,7 @@ class GetAccessTokenSpec: QuickSpec {
                             self.stub(matcher, builder: builder)
                             
                             var responseValue: AccessToken?
-                            var responseError: NSError?
+                            var responseError: SwishError?
                             
                             APIClient.getAccessToken(clientId: clientId, scopes: scopes, provider: provider, token: providerAccessToken, userId: userId) { result in
                                 responseValue = result.value
@@ -180,7 +180,7 @@ class GetAccessTokenSpec: QuickSpec {
                             self.stub(matcher, builder: builder)
                             
                             var responseValue: AccessToken?
-                            var responseError: NSError?
+                            var responseError: SwishError?
                             
                             APIClient.getAccessToken(clientId: clientId, provider: provider, token: providerAccessToken, secret: providerTokenSecret) { result in
                                 responseValue = result.value
@@ -207,7 +207,7 @@ class GetAccessTokenSpec: QuickSpec {
                             self.stub(matcher, builder: builder)
                             
                             var responseValue: AccessToken?
-                            var responseError: NSError?
+                            var responseError: SwishError?
                             
                             APIClient.getAccessToken(clientId: clientId, scopes: scopes, provider: provider, token: providerAccessToken, secret: providerTokenSecret) { result in
                                 responseValue = result.value
@@ -235,7 +235,7 @@ class GetAccessTokenSpec: QuickSpec {
                             self.stub(matcher, builder: builder)
                             
                             var responseValue: AccessToken?
-                            var responseError: NSError?
+                            var responseError: SwishError?
                             
                             APIClient.getAccessToken(clientId: clientId, provider: provider, code: providerAuthCode, redirectUri: providerRedirectUri) { result in
                                 responseValue = result.value
@@ -262,7 +262,7 @@ class GetAccessTokenSpec: QuickSpec {
                             self.stub(matcher, builder: builder)
                             
                             var responseValue: AccessToken?
-                            var responseError: NSError?
+                            var responseError: SwishError?
                             
                             APIClient.getAccessToken(clientId: clientId, scopes: scopes, provider: provider, code: providerAuthCode, redirectUri: providerRedirectUri) { result in
                                 responseValue = result.value

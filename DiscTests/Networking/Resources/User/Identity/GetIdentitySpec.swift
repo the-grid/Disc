@@ -48,7 +48,7 @@ class GetIdentitySpec: QuickSpec {
                 self.stub(matcher, builder: builder)
                 
                 var responseValue: Identity?
-                var responseError: NSError?
+                var responseError: SwishError?
                 
                 passport.getIdentity(id) { result in
                     responseValue = result.value

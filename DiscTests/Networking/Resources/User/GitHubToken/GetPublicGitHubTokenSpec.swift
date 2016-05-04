@@ -27,7 +27,7 @@ class GetPublicGitHubTokenSpec: QuickSpec {
                 self.stub(matcher, builder: builder)
                 
                 var responseValue: GitHubToken?
-                var responseError: NSError?
+                var responseError: SwishError?
                 
                 passport.getPublicGitHubToken() { result in
                     responseValue = result.value
