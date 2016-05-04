@@ -2,7 +2,7 @@ import Result
 import Swish
 
 private struct GetIdentityRequest: Request {
-    typealias ResponseType = Identity
+    typealias ResponseObject = Identity
     
     let token: String
     let id: Int

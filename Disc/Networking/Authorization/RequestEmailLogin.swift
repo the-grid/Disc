@@ -2,7 +2,7 @@ import Result
 import Swish
 
 private struct RequestEmailLogin: Request {
-    typealias ResponseType = EmptyResponse
+    typealias ResponseObject = EmptyResponse
     
     private static let authSendUrl = "api/auth/send"
     

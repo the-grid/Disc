@@ -2,7 +2,7 @@ import Result
 import Swish
 
 private struct GetIdentitiesRequest: Request {
-    typealias ResponseType = [Identity]
+    typealias ResponseObject = [Identity]
     let token: String
     
     func build() -> NSURLRequest {

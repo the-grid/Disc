@@ -2,7 +2,7 @@ import Result
 import Swish
 
 private struct GetUserRequest: Request {
-    typealias ResponseType = User
+    typealias ResponseObject = User
     
     let token: String
     let id: String?

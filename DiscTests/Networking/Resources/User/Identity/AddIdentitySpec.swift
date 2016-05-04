@@ -4,12 +4,13 @@ import MockingjayMatchers
 import Nimble
 import Quick
 import Result
+import Swish
 
 class AddIdentitySpec: QuickSpec {
     override func spec() {
         describe("adding an identity") {
             var token: String!
-            var passport: APIClient!
+            var passport: Disc.APIClient!
             
             var providerAccessToken: String!
             var provider: String!

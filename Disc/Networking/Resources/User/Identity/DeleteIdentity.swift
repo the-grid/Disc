@@ -2,7 +2,7 @@ import Result
 import Swish
 
 private struct DeleteIdentityRequest: Request {
-    typealias ResponseType = EmptyResponse
+    typealias ResponseObject = EmptyResponse
     
     let token: String
     let id: Int

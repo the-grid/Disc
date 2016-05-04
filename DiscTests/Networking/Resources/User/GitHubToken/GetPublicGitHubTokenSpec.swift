@@ -4,6 +4,7 @@ import MockingjayMatchers
 import Nimble
 import Quick
 import Result
+import Swish
 
 class GetPublicGitHubTokenSpec: QuickSpec {
     override func spec() {

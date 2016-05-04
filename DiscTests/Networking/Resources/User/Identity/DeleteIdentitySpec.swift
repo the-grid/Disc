@@ -4,6 +4,7 @@ import MockingjayMatchers
 import Nimble
 import Quick
 import Result
+import Swish
 
 class DeleteIdentitySpec: QuickSpec {
     override func spec() {
@@ -19,7 +20,7 @@ class DeleteIdentitySpec: QuickSpec {
                 self.stub(matcher, builder: builder)
                 
                 var responseValue: Void?
-                var responseError: SwishError? = SwishError(domain: "io.thegrid.Disc", code: 0, userInfo: nil)
+                var responseError: SwishError? = NSError(domain: "io.thegrid.Disc", code: 0, userInfo: nil) as? SwishError
                 
                 passport.deleteIdentity(id) { result in
                     responseValue = result.value

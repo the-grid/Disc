@@ -2,7 +2,7 @@ import Result
 import Swish
 
 private struct GetAccessTokenRequest: Request {
-    typealias ResponseType = AccessToken
+    typealias ResponseObject = AccessToken
     
     private static let authLoginUrl = "api/auth/login"
     

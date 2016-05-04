@@ -2,7 +2,7 @@ import Result
 import Swish
 
 private struct GetPublicGitHubTokenRequest: Request {
-    typealias ResponseType = GitHubToken
+    typealias ResponseObject = GitHubToken
     let token: String
     
     func build() -> NSURLRequest {

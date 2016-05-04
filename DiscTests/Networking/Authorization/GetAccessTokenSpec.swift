@@ -4,6 +4,7 @@ import MockingjayMatchers
 import Nimble
 import Quick
 import Result
+import Swish
 
 class GetAccessTokenSpec: QuickSpec {
     override func spec() {
