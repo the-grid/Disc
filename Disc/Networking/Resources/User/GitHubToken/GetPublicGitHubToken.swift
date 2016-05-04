@@ -2,7 +2,7 @@ import Result
 import Swish
 
 private struct GetPublicGitHubTokenRequest: Request {
-    typealias ResponseType = GitHubToken
+    typealias ResponseObject = GitHubToken
     let token: String
     
     func build() -> NSURLRequest {
@@ -13,7 +13,7 @@ private struct GetPublicGitHubTokenRequest: Request {
 public extension APIClient {
     /// Get the current user's public GitHub token.
     /// - requires: An access token obtained with the `GitHubPublic` scope.
-    func getPublicGitHubToken(completionHandler: Result<GitHubToken, NSError> -> Void) {
+    func getPublicGitHubToken(completionHandler: Result<GitHubToken, SwishError> -> Void) {
         let request = GetPublicGitHubTokenRequest(token: token)
         client.performRequest(request, completionHandler: completionHandler)
     }

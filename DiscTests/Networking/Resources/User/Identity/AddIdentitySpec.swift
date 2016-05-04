@@ -4,12 +4,13 @@ import MockingjayMatchers
 import Nimble
 import Quick
 import Result
+import Swish
 
 class AddIdentitySpec: QuickSpec {
     override func spec() {
         describe("adding an identity") {
             var token: String!
-            var passport: APIClient!
+            var passport: Disc.APIClient!
             
             var providerAccessToken: String!
             var provider: String!
@@ -67,7 +68,7 @@ class AddIdentitySpec: QuickSpec {
                     self.stub(matcher, builder: builder)
                     
                     var responseValue: Identity?
-                    var responseError: NSError?
+                    var responseError: SwishError?
                     
                     passport.addIdentity(identity.provider, token: providerAccessToken) { result in
                         responseValue = result.value
@@ -94,7 +95,7 @@ class AddIdentitySpec: QuickSpec {
                     self.stub(matcher, builder: builder)
                     
                     var responseValue: Identity?
-                    var responseError: NSError?
+                    var responseError: SwishError?
                     
                     passport.addIdentity(identity.provider, token: providerAccessToken, secret: providerTokenSecret) { result in
                         responseValue = result.value
@@ -122,7 +123,7 @@ class AddIdentitySpec: QuickSpec {
                     self.stub(matcher, builder: builder)
                     
                     var responseValue: Identity?
-                    var responseError: NSError?
+                    var responseError: SwishError?
                     
                     passport.addIdentity(identity.provider, code: authCode, redirectUri: redirectUri) { result in
                         responseValue = result.value

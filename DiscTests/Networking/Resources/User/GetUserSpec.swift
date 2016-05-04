@@ -4,6 +4,7 @@ import MockingjayMatchers
 import Nimble
 import Quick
 import Result
+import Swish
 
 class GetUserSpec: QuickSpec {
     override func spec() {
@@ -43,7 +44,7 @@ class GetUserSpec: QuickSpec {
                     self.stub(matcher, builder: builder)
 
                     var responseValue: User?
-                    var responseError: NSError?
+                    var responseError: SwishError?
                     
                     passport.getUser { result in
                         responseValue = result.value
@@ -84,7 +85,7 @@ class GetUserSpec: QuickSpec {
                     self.stub(matcher, builder: builder)
                     
                     var responseUser: User?
-                    var responseError: NSError?
+                    var responseError: SwishError?
                     
                     passport.getUser(id) { result in
                         responseUser = result.value

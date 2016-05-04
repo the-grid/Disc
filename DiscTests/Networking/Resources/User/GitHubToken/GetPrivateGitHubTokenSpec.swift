@@ -4,6 +4,7 @@ import MockingjayMatchers
 import Nimble
 import Quick
 import Result
+import Swish
 
 class GetPrivateGitHubTokenSpec: QuickSpec {
     override func spec() {
@@ -27,7 +28,7 @@ class GetPrivateGitHubTokenSpec: QuickSpec {
                 self.stub(matcher, builder: builder)
                 
                 var responseValue: GitHubToken?
-                var responseError: NSError?
+                var responseError: SwishError?
                 
                 passport.getPrivateGitHubToken() { result in
                     responseValue = result.value

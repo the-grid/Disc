@@ -99,8 +99,8 @@ private func createRequestParameters(email email: String) -> [String: String] {
 
 func createRequestParameters(clientId clientId: String, redirectUri: String, scopes: [Scope]) -> [String: String] {
     return createRequestParameters(clientId: clientId)
-        + createRequestParameters(scopes: scopes)
         + createRequestParameters(redirectUri: redirectUri)
+        + createRequestParameters(scopes: scopes)
         + [ "response_type": "code" ]
 }
 
@@ -142,8 +142,9 @@ func createRequestParameters(clientId clientId: String, scopes: [Scope] = [], pr
         + createRequestParameters(userId: userId)
 }
 
-func createRequestParameters(clientId clientId: String, email: String) -> [String: String] {
+func createRequestParameters(clientId clientId: String, redirectUri: String, email: String) -> [String: String] {
     return createRequestParameters(clientId: clientId)
+        + createRequestParameters(redirectUri: redirectUri)
         + createRequestParameters(email: email)
 }
 

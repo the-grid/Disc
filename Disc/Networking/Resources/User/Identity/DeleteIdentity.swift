@@ -2,7 +2,7 @@ import Result
 import Swish
 
 private struct DeleteIdentityRequest: Request {
-    typealias ResponseType = EmptyResponse
+    typealias ResponseObject = EmptyResponse
     
     let token: String
     let id: Int
@@ -16,7 +16,7 @@ public extension APIClient {
     /// Delete the identity with the provided `id`.
     ///
     /// - parameter id: The ID of the identity.
-    func deleteIdentity(id: Int, completionHandler: Result<EmptyResponse, NSError> -> Void) {
+    func deleteIdentity(id: Int, completionHandler: Result<EmptyResponse, SwishError> -> Void) {
         let request = DeleteIdentityRequest(token: token, id: id)
         client.performRequest(request, completionHandler: completionHandler)
     }
