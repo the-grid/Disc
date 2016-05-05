@@ -15,7 +15,7 @@
 	url = https://github.com/antitypical/Result.git
 [submodule "Carthage/Checkouts/Swish"]
 	path = Carthage/Checkouts/Swish
-	url = https://github.com/thoughtbot/Swish.git
+	url = https://github.com/the-grid/Swish.git
 [submodule "Carthage/Checkouts/Mockingjay"]
 	path = Carthage/Checkouts/Mockingjay
 	url = https://github.com/kylef/Mockingjay.git

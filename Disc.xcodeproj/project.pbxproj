@@ -103,6 +103,8 @@
 		2CF8D67E1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D67C1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift */; };
 		2CF8D6811BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */; };
 		2CF8D6821BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */; };
+		7696210E1CDB422A00741BD6 /* StringDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696210D1CDB422A00741BD6 /* StringDeserializer.swift */; };
+		7696210F1CDB422A00741BD6 /* StringDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696210D1CDB422A00741BD6 /* StringDeserializer.swift */; };
 		76D9B8CA1CD3487D001A8ADF /* RequestEmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9B8C91CD3487D001A8ADF /* RequestEmailLogin.swift */; };
 		76D9B8CB1CD3487D001A8ADF /* RequestEmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9B8C91CD3487D001A8ADF /* RequestEmailLogin.swift */; };
 /* End PBXBuildFile section */
@@ -178,6 +180,7 @@
 		2CF8D6741BD5D48D004D4B19 /* GetIdentities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIdentities.swift; sourceTree = "<group>"; };
 		2CF8D67C1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPublicGitHubToken.swift; path = GitHubToken/GetPublicGitHubToken.swift; sourceTree = "<group>"; };
 		2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPrivateGitHubToken.swift; path = GitHubToken/GetPrivateGitHubToken.swift; sourceTree = "<group>"; };
+		7696210D1CDB422A00741BD6 /* StringDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringDeserializer.swift; sourceTree = "<group>"; };
 		76D9B8C91CD3487D001A8ADF /* RequestEmailLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEmailLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -333,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				2C9C58981BD7AE6E00EFCA29 /* Request.swift */,
+				7696210D1CDB422A00741BD6 /* StringDeserializer.swift */,
 			);
 			name = Helpers;
 			path = Disc/Networking/Helpers;
@@ -643,6 +647,7 @@
 				2CCF4A471BD22A29006800E6 /* Provider.swift in Sources */,
 				2C9C58681BD793D600EFCA29 /* GetAccessToken.swift in Sources */,
 				2C565DB21BFCC09200F63711 /* Curry.swift in Sources */,
+				7696210F1CDB422A00741BD6 /* StringDeserializer.swift in Sources */,
 				2C565DB41BFCC09200F63711 /* EqualTo.swift in Sources */,
 				2CF8D6761BD5D48D004D4B19 /* DeleteIdentity.swift in Sources */,
 				2C9C586A1BD793D600EFCA29 /* CreateLoginUrl.swift in Sources */,
@@ -696,6 +701,7 @@
 				2CCF4A461BD22A29006800E6 /* Provider.swift in Sources */,
 				2C9C58671BD793D600EFCA29 /* GetAccessToken.swift in Sources */,
 				2C565DB11BFCC09200F63711 /* Curry.swift in Sources */,
+				7696210E1CDB422A00741BD6 /* StringDeserializer.swift in Sources */,
 				2C565DB31BFCC09200F63711 /* EqualTo.swift in Sources */,
 				2CF8D6751BD5D48D004D4B19 /* DeleteIdentity.swift in Sources */,
 				2C9C58691BD793D600EFCA29 /* CreateLoginUrl.swift in Sources */,

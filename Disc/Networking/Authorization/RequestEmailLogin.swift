@@ -2,7 +2,7 @@ import Result
 import Swish
 
 private struct GetEmailLoginRequest: Request {
-    typealias ResponseObject = EmptyResponse
+    typealias ResponseObject = String
     
     private static let authSendUrl = "api/auth/send"
     
@@ -17,6 +17,10 @@ private struct GetEmailLoginRequest: Request {
     func build() -> NSURLRequest {
         return createRequest(.POST, url, body: body)
     }
+    
+    private func parse(s: String) -> Result<String, SwishError> {
+        return .Success(s)
+    }
 }
 
 public extension APIClient {
@@ -25,8 +29,8 @@ public extension APIClient {
     /// - parameter clientId: The unique identifier of your application.
     /// - parameter redirectUri: The redirect URI for the `provider`.
     /// - parameter email: The email address associated with the account.
-    static func requestEmailLogin(clientId: String, redirectUri:String, email: String, completionHandler: Result<EmptyResponse, SwishError> -> Void) {
+    static func requestEmailLogin(clientId: String, redirectUri:String, email: String, completionHandler: Result<String, SwishError> -> Void) {
         let request = GetEmailLoginRequest(clientId: clientId, redirectUri: redirectUri, email: email)
-        staticClient.performRequest(request, completionHandler: completionHandler)
+        staticJsonlessClient.performRequest(request, completionHandler: completionHandler)
     }
 }
