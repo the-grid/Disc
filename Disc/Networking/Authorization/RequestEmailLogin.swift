@@ -31,6 +31,6 @@ public extension APIClient {
     /// - parameter email: The email address associated with the account.
     static func requestEmailLogin(clientId: String, redirectUri:String, email: String, completionHandler: Result<String, SwishError> -> Void) {
         let request = GetEmailLoginRequest(clientId: clientId, redirectUri: redirectUri, email: email)
-        staticClient.performRequest(request, completionHandler: completionHandler)
+        staticJsonlessClient.performRequest(request, completionHandler: completionHandler)
     }
 }
