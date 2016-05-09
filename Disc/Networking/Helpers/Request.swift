@@ -97,6 +97,10 @@ private func createRequestParameters(email email: String) -> [String: String] {
     return [ "email": email ]
 }
 
+private func createRequestParameters(refreshToken refreshToken: String) -> [String: String] {
+    return [ "refresh_token": refreshToken ]
+}
+
 func createRequestParameters(clientId clientId: String, redirectUri: String, scopes: [Scope]) -> [String: String] {
     return createRequestParameters(clientId: clientId)
         + createRequestParameters(redirectUri: redirectUri)
@@ -146,5 +150,10 @@ func createRequestParameters(clientId clientId: String, redirectUri: String, ema
     return createRequestParameters(clientId: clientId)
         + createRequestParameters(redirectUri: redirectUri)
         + createRequestParameters(email: email)
+}
+
+func createRequestParameters(clientId clientId: String, refreshToken: String) -> [String: String] {
+    return createRequestParameters(clientId: clientId)
+        + createRequestParameters(refreshToken: refreshToken)
 }
 

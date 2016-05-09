@@ -1,4 +1,4 @@
 github "kylef/Mockingjay" "050f003777702972b0bf72dcdc26207ada566342"
-github "Quick/Nimble" ~> 4.0.0
-github "Quick/Quick" ~> 0.9.0
+github "Quick/Nimble" ~> 4.0
+github "Quick/Quick" ~> 0.9
 github "the-grid/MockingjayMatchers" ~> 0.2.0

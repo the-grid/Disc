@@ -103,6 +103,10 @@
 		2CF8D67E1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D67C1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift */; };
 		2CF8D6811BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */; };
 		2CF8D6821BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */; };
+		7689B1D41CE11C54006C7939 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7689B1D31CE11C54006C7939 /* NSError.swift */; };
+		7689B1D61CE12154006C7939 /* StringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7689B1D51CE12154006C7939 /* StringParser.swift */; };
+		7689B1DD1CE14216006C7939 /* RefreshAccessTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7689B1DA1CE13FDF006C7939 /* RefreshAccessTokenSpec.swift */; };
+		7689B1DE1CE14217006C7939 /* RefreshAccessTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7689B1DA1CE13FDF006C7939 /* RefreshAccessTokenSpec.swift */; };
 		7696210E1CDB422A00741BD6 /* StringDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696210D1CDB422A00741BD6 /* StringDeserializer.swift */; };
 		7696210F1CDB422A00741BD6 /* StringDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696210D1CDB422A00741BD6 /* StringDeserializer.swift */; };
 		76D9B8CA1CD3487D001A8ADF /* RequestEmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9B8C91CD3487D001A8ADF /* RequestEmailLogin.swift */; };
@@ -180,6 +184,9 @@
 		2CF8D6741BD5D48D004D4B19 /* GetIdentities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIdentities.swift; sourceTree = "<group>"; };
 		2CF8D67C1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPublicGitHubToken.swift; path = GitHubToken/GetPublicGitHubToken.swift; sourceTree = "<group>"; };
 		2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetPrivateGitHubToken.swift; path = GitHubToken/GetPrivateGitHubToken.swift; sourceTree = "<group>"; };
+		7689B1D31CE11C54006C7939 /* NSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
+		7689B1D51CE12154006C7939 /* StringParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringParser.swift; sourceTree = "<group>"; };
+		7689B1DA1CE13FDF006C7939 /* RefreshAccessTokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshAccessTokenSpec.swift; sourceTree = "<group>"; };
 		7696210D1CDB422A00741BD6 /* StringDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringDeserializer.swift; sourceTree = "<group>"; };
 		76D9B8C91CD3487D001A8ADF /* RequestEmailLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEmailLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -328,6 +335,7 @@
 			children = (
 				2C9C58901BD79C9E00EFCA29 /* CreateLoginUrlSpec.swift */,
 				2C9C58941BD79CC700EFCA29 /* GetAccessTokenSpec.swift */,
+				7689B1DA1CE13FDF006C7939 /* RefreshAccessTokenSpec.swift */,
 			);
 			name = Authorization;
 			sourceTree = "<group>";
@@ -337,6 +345,7 @@
 			children = (
 				2C9C58981BD7AE6E00EFCA29 /* Request.swift */,
 				7696210D1CDB422A00741BD6 /* StringDeserializer.swift */,
+				7689B1D51CE12154006C7939 /* StringParser.swift */,
 			);
 			name = Helpers;
 			path = Disc/Networking/Helpers;
@@ -424,6 +433,7 @@
 			children = (
 				2CF8D65A1BD5CE5E004D4B19 /* NSURL.swift */,
 				2CF8D65B1BD5CE5E004D4B19 /* NSUUID.swift */,
+				7689B1D31CE11C54006C7939 /* NSError.swift */,
 			);
 			name = Extensions;
 			path = Models/Extensions;
@@ -676,6 +686,7 @@
 				2C9C58921BD79C9E00EFCA29 /* CreateLoginUrlSpec.swift in Sources */,
 				2C9C58961BD79CC700EFCA29 /* GetAccessTokenSpec.swift in Sources */,
 				2C08E21C1BFB5FA6007A631D /* GetIdentitySpec.swift in Sources */,
+				7689B1DE1CE14217006C7939 /* RefreshAccessTokenSpec.swift in Sources */,
 				2C7405C71BD32B8500243DBD /* UserSpec.swift in Sources */,
 				2C9C588C1BD79C3400EFCA29 /* GetPrivateGitHubTokenSpec.swift in Sources */,
 				2C9C588F1BD79C3400EFCA29 /* GetIdentitiesSpec.swift in Sources */,
@@ -700,6 +711,7 @@
 				2CF8D65C1BD5CE5E004D4B19 /* NSURL.swift in Sources */,
 				2CCF4A461BD22A29006800E6 /* Provider.swift in Sources */,
 				2C9C58671BD793D600EFCA29 /* GetAccessToken.swift in Sources */,
+				7689B1D41CE11C54006C7939 /* NSError.swift in Sources */,
 				2C565DB11BFCC09200F63711 /* Curry.swift in Sources */,
 				7696210E1CDB422A00741BD6 /* StringDeserializer.swift in Sources */,
 				2C565DB31BFCC09200F63711 /* EqualTo.swift in Sources */,
@@ -710,6 +722,7 @@
 				2CF8D65E1BD5CE5E004D4B19 /* NSUUID.swift in Sources */,
 				2C565DB61BFCC25500F63711 /* Addition.swift in Sources */,
 				2CF8D6771BD5D48D004D4B19 /* GetIdentities.swift in Sources */,
+				7689B1D61CE12154006C7939 /* StringParser.swift in Sources */,
 				2CCF4A401BD22420006800E6 /* Scope.swift in Sources */,
 				2CF8D66A1BD5D2F3004D4B19 /* GetUser.swift in Sources */,
 				2CCF4A431BD22447006800E6 /* Identity.swift in Sources */,
@@ -730,6 +743,7 @@
 				2C9C58911BD79C9E00EFCA29 /* CreateLoginUrlSpec.swift in Sources */,
 				2C9C58951BD79CC700EFCA29 /* GetAccessTokenSpec.swift in Sources */,
 				2C08E21B1BFB5FA6007A631D /* GetIdentitySpec.swift in Sources */,
+				7689B1DD1CE14216006C7939 /* RefreshAccessTokenSpec.swift in Sources */,
 				2C7405C61BD32B8500243DBD /* UserSpec.swift in Sources */,
 				2C9C58871BD79C3300EFCA29 /* GetPrivateGitHubTokenSpec.swift in Sources */,
 				2C9C588A1BD79C3300EFCA29 /* GetIdentitiesSpec.swift in Sources */,

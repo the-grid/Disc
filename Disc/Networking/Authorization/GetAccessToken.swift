@@ -5,6 +5,7 @@ private struct GetAccessTokenRequest: Request {
     typealias ResponseObject = AccessToken
     
     private static let authLoginUrl = "api/auth/login"
+    private static let authRefreshUrl = "api/auth/token"
     
     let url: String
     let body: [String: String]
@@ -27,6 +28,11 @@ private struct GetAccessTokenRequest: Request {
     init(clientId: String, scopes: [Scope] = [], provider: Provider, token: String, userId: String) {
         url = GetAccessTokenRequest.authLoginUrl
         body = createRequestParameters(clientId: clientId, scopes: scopes, provider: provider, token: token, userId: userId)
+    }
+    
+    init(clientId: String, refreshToken: String) {
+        url = GetAccessTokenRequest.authRefreshUrl
+        body = createRequestParameters(clientId: clientId, refreshToken: refreshToken)
     }
     
     func build() -> NSURLRequest {
@@ -79,6 +85,15 @@ public extension APIClient {
     /// - parameter userId: The UUID of the user.
     static func getAccessToken(clientId clientId: String, scopes: [Scope] = [], provider: Provider, token: String, userId: String, completionHandler: Result<AccessToken, SwishError> -> Void) {
         let request = GetAccessTokenRequest(clientId: clientId, scopes: scopes, provider: provider, token: token, userId: userId)
+        staticClient.performRequest(request, completionHandler: completionHandler)
+    }
+    
+    /// Get a Passport access token with a refresh token.
+    ///
+    /// - parameter clientId: The unique identifier of your application.
+    /// - parameter refreshToken: The passport provided refresh token.
+    static func getRefreshToken(clientId clientId: String, refreshToken: String, completionHandler: Result<AccessToken, SwishError> -> Void) {
+        let request = GetAccessTokenRequest(clientId: clientId, refreshToken: refreshToken)
         staticClient.performRequest(request, completionHandler: completionHandler)
     }
 }
