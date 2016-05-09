@@ -11,7 +11,8 @@ class GetAccessTokenSpec: QuickSpec {
         describe("getting an access token") {
             var clientId: String!
             var userId: String!
-            var value: String!
+            var accessToken: String!
+            var refreshToken: String!
             var responseBody: [String: String]!
             
             var token: AccessToken!
@@ -19,13 +20,14 @@ class GetAccessTokenSpec: QuickSpec {
             beforeEach {
                 clientId = "id"
                 userId = "id"
-                value = "token"
-                
+                accessToken = "token"
+                refreshToken = "token"
                 responseBody = [
-                    "access_token": value
+                    "access_token": accessToken,
+                    "refresh_token": refreshToken
                 ]
                 
-                token = AccessToken(value: value)
+                token = AccessToken(accessToken: accessToken, refreshToken: refreshToken)
             }
             
             context("with a Passport auth code") {
