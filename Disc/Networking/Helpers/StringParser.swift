@@ -7,13 +7,12 @@ struct StringParser: Parser {
     static func parse(j: AnyObject) -> Result<String, SwishError> {
         guard let data = j as? NSData else {
             let error = NSError.error("Bad data!")
-            
-            return .Failure(.InvalidJSONResponse(error))
+            return .Failure(.URLSessionError(error))
         }
-        
-        let error = NSError.error("Couldn't convert to string!")
-        let string = String(data: data, encoding: NSUTF8StringEncoding)
-        
-        return Result(string, failWith: .InvalidJSONResponse(error))
+        guard let string = String(data: data, encoding: NSUTF8StringEncoding) else {
+            let error = NSError.error("Couldn't NSData convert to string!")
+            return .Failure(.URLSessionError(error))
+        }
+        return .Success(string)
     }
 }

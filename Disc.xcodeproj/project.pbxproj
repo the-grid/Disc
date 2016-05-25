@@ -103,6 +103,8 @@
 		2CF8D67E1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D67C1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift */; };
 		2CF8D6811BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */; };
 		2CF8D6821BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6801BD5EF21004D4B19 /* GetPrivateGitHubToken.swift */; };
+		7613C9211CF3F757009B4DF1 /* StringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7689B1D51CE12154006C7939 /* StringParser.swift */; };
+		7613C9221CF3F78E009B4DF1 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7689B1D31CE11C54006C7939 /* NSError.swift */; };
 		7689B1D41CE11C54006C7939 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7689B1D31CE11C54006C7939 /* NSError.swift */; };
 		7689B1D61CE12154006C7939 /* StringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7689B1D51CE12154006C7939 /* StringParser.swift */; };
 		7689B1DD1CE14216006C7939 /* RefreshAccessTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7689B1DA1CE13FDF006C7939 /* RefreshAccessTokenSpec.swift */; };
@@ -661,6 +663,7 @@
 				2C565DB41BFCC09200F63711 /* EqualTo.swift in Sources */,
 				2CF8D6761BD5D48D004D4B19 /* DeleteIdentity.swift in Sources */,
 				2C9C586A1BD793D600EFCA29 /* CreateLoginUrl.swift in Sources */,
+				7613C9211CF3F757009B4DF1 /* StringParser.swift in Sources */,
 				2CF8D6821BD5EF21004D4B19 /* GetPrivateGitHubToken.swift in Sources */,
 				2CF8D6511BD5B7D1004D4B19 /* APIClient.swift in Sources */,
 				2CF8D65F1BD5CE5E004D4B19 /* NSUUID.swift in Sources */,
@@ -672,6 +675,7 @@
 				2CCF4A3E1BD223F9006800E6 /* User.swift in Sources */,
 				2C9C589A1BD7AE6E00EFCA29 /* Request.swift in Sources */,
 				2CF8D67E1BD5EAF4004D4B19 /* GetPublicGitHubToken.swift in Sources */,
+				7613C9221CF3F78E009B4DF1 /* NSError.swift in Sources */,
 				76D9B8CB1CD3487D001A8ADF /* RequestEmailLogin.swift in Sources */,
 				2C9C586D1BD7948A00EFCA29 /* AccessToken.swift in Sources */,
 				2C08E21F1BFB619C007A631D /* GetIdentity.swift in Sources */,
