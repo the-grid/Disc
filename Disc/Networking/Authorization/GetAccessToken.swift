@@ -92,7 +92,7 @@ public extension APIClient {
     ///
     /// - parameter clientId: The unique identifier of your application.
     /// - parameter refreshToken: The passport provided refresh token.
-    static func getRefreshToken(clientId clientId: String, refreshToken: String, completionHandler: Result<AccessToken, SwishError> -> Void) {
+    static func getAccessToken(clientId clientId: String, refreshToken: String, completionHandler: Result<AccessToken, SwishError> -> Void) {
         let request = GetAccessTokenRequest(clientId: clientId, refreshToken: refreshToken)
         staticClient.performRequest(request, completionHandler: completionHandler)
     }
