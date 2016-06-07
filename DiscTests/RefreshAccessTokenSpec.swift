@@ -33,7 +33,7 @@ class RefreshAccessTokenSpec: QuickSpec {
                     ]
                     let url = "https://passport.thegrid.io/api/auth/token"
                     
-                    let matcher = api(.POST, url, body: requestBody)
+                    let matcher = api(.PUT, url, body: requestBody)
                     let builder = json(responseBody)
                     self.stub(matcher, builder: builder)
                     
