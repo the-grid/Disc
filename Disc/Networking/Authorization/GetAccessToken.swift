@@ -9,6 +9,7 @@ private struct GetAccessTokenRequest: Request {
     
     let url: String
     let body: [String: String]
+    var method: RequestMethod = .POST
     
     init(clientId: String, clientSecret: String, code: String) {
         url = "login/authorize/token"
@@ -31,12 +32,13 @@ private struct GetAccessTokenRequest: Request {
     }
     
     init(clientId: String, refreshToken: String) {
+        method = .PUT
         url = GetAccessTokenRequest.authRefreshUrl
         body = createRequestParameters(clientId: clientId, refreshToken: refreshToken)
     }
     
     func build() -> NSURLRequest {
-        return createRequest(.POST, url, body: body)
+        return createRequest(method, url, body: body)
     }
 }
 
