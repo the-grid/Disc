@@ -40,7 +40,7 @@ class RefreshAccessTokenSpec: QuickSpec {
                     var responseValue: AccessToken?
                     var responseError: SwishError?
                     
-                    APIClient.getRefreshToken(clientId: clientId, refreshToken: refreshToken) { result in
+                    APIClient.getAccessToken(clientId: clientId, refreshToken: refreshToken) { result in
                         responseValue = result.value
                         responseError = result.error
                     }
