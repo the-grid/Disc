@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Disc"
-  s.version      = "0.5.9"
+  s.version      = "0.6.0"
   s.summary      = "An API client for Grid Passport."
   s.homepage     = "https://github.com/the-grid/Disc"
   s.license     = { :type => "MIT" }
