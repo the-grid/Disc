@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/the-grid/Disc.git", :tag => "#{s.version}" }
-  s.source_files  = "Classes", "Disc/**/*.swift"
+  s.source_files  = "Classes", "Disc/**/*.{h,m,Swift}"
   s.requires_arc = true
   s.dependency "Swish", "~> 1.0.0"
   s.dependency "Argo", "~> 3.0.0"
