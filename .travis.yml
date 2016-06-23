@@ -5,6 +5,7 @@ git:
 before_install:
   - rvm get head
   - brew update
+  - brew unlink carthage
   - brew install carthage
 install: script/install
 script: script/test
