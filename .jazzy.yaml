@@ -9,4 +9,4 @@ custom_categories:
     - User
   - name: Networking
     children:
-    - APIClient
+    - GridAPISwiftClient
