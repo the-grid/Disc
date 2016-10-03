@@ -4,28 +4,4 @@
    <FileRef
       location = "container:Disc.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Argo/Argo.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Nimble/Nimble.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Mockingjay/Mockingjay.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/MockingjayMatchers/MockingjayMatchers.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Ogra/Ogra.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Quick/Quick.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Result/Result.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Swish/Swish.xcodeproj">
-   </FileRef>
 </Workspace>
