@@ -5,16 +5,16 @@ private struct GetPublicGitHubTokenRequest: Request {
     typealias ResponseObject = GitHubToken
     let token: String
     
-    func build() -> NSURLRequest {
-        return createRequest(.GET, "api/user/github", token: token)
+    func build() -> URLRequest {
+        return createRequest(.GET, "api/user/github", token: token) as URLRequest
     }
 }
 
 public extension APIClient {
     /// Get the current user's public GitHub token.
     /// - requires: An access token obtained with the `GitHubPublic` scope.
-    func getPublicGitHubToken(completionHandler: Result<GitHubToken, SwishError> -> Void) {
+    func getPublicGitHubToken(_ completionHandler: @escaping (Result<GitHubToken, SwishError>) -> Void) {
         let request = GetPublicGitHubTokenRequest(token: token)
-        client.performRequest(request, completionHandler: completionHandler)
+        let _ = client.performRequest(request, completionHandler: completionHandler)
     }
 }

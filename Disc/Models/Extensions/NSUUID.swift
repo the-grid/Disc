@@ -5,24 +5,27 @@ import Ogra
 
 // Mark: - Decodable
 
-extension NSUUID: Decodable {
-    public typealias DecodedType = NSUUID
+extension UUID: Decodable {
+    public typealias DecodedType = UUID
     
-    public static func decode(j: JSON) -> Decoded<NSUUID> {
-        switch j {
-        case .String(let s):
-            return NSUUID(UUIDString: s).map(pure) ?? .typeMismatch("UUID", actual: j)
-        default:
-            return .typeMismatch("UUID", actual: j)
+    public static func decode(_ json: JSON) -> Decoded<UUID> {
+      switch json {
+      case .string(let s):
+        if let result = UUID(uuidString: s).map(pure) {
+          return result
         }
+        return .typeMismatch(expected: "UUID", actual: json)
+      default:
+        return .typeMismatch(expected: "UUID", actual: json)
+      }
     }
 }
 
 
 // Mark: - Encodable
 
-extension NSUUID: Encodable {
+extension UUID: Encodable {
     public func encode() -> JSON {
-        return UUIDString.lowercaseString.encode()
+        return uuidString.lowercased().encode()
     }
 }

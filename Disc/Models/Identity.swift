@@ -1,25 +1,26 @@
 import Argo
 import Ogra
+import Runes
 
 /// An identity.
 public struct Identity {
     public let bio: String?
     public let description: String
     public let id: Int
-    public let imageUrl: NSURL?
+    public let imageUrl: URL?
     public let location: String?
     public let provider: Provider
-    public let url: NSURL
+    public let url: URL
     public let username: String
     
     public init(
         bio: String?,
         description: String,
         id: Int,
-        imageUrl: NSURL?,
+        imageUrl: URL?,
         location: String?,
         provider: Provider,
-        url: NSURL,
+        url: URL,
         username: String
     ) {
         self.bio = bio
@@ -37,7 +38,7 @@ public struct Identity {
 // Mark: - Decodable
 
 extension Identity: Decodable {
-    public static func decode(j: JSON) -> Decoded<Identity> {
+    public static func decode(_ j: JSON) -> Decoded<Identity> {
         return curry(self.init)
             <^> j <|? "bio"
             <*> j <|  "description"
@@ -55,7 +56,7 @@ extension Identity: Decodable {
 
 extension Identity: Encodable {
     public func encode() -> JSON {
-        return .Object([
+        return .object([
             "bio": bio.encode(),
             "description": description.encode(),
             "id": id.encode(),

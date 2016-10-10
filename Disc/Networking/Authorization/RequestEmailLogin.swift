@@ -5,7 +5,7 @@ private struct GetEmailLoginRequest: Request {
     typealias ResponseObject = Bool
     typealias ResponseParser = StringParser
     
-    private static let authSendUrl = "api/auth/send"
+    fileprivate static let authSendUrl = "api/auth/send"
     
     let url: String
     let body: [String: String]
@@ -15,11 +15,11 @@ private struct GetEmailLoginRequest: Request {
         body = createRequestParameters(clientId: clientId, redirectUri: redirectUri, email: email)
     }
     
-    func build() -> NSURLRequest {
-        return createRequest(.POST, url, body: body)
+    func build() -> URLRequest {
+        return createRequest(.POST, url, body: body as [String : AnyObject]?) as URLRequest
     }
     
-    private func parse(s: String) -> Result<Bool, SwishError> {
+    fileprivate func parse(_ s: String) -> Result<Bool, SwishError> {
         return Result(true)
     }
 }
@@ -30,8 +30,8 @@ public extension APIClient {
     /// - parameter clientId: The unique identifier of your application.
     /// - parameter redirectUri: The redirect URI for the `provider`.
     /// - parameter email: The email address associated with the account.
-    static func requestEmailLogin(clientId: String, redirectUri:String, email: String, completionHandler: Result<Bool, SwishError> -> Void) {
+    static func requestEmailLogin(_ clientId: String, redirectUri:String, email: String, completionHandler: @escaping (Result<Bool, SwishError>) -> Void) {
         let request = GetEmailLoginRequest(clientId: clientId, redirectUri: redirectUri, email: email)
-        staticJsonlessClient.performRequest(request, completionHandler: completionHandler)
+        let _ = staticJsonlessClient.performRequest(request, completionHandler: completionHandler)
     }
 }

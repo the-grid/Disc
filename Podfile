@@ -1,13 +1,20 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '9.0'
+use_frameworks!
 
 def testing_pods
-	#
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'Mockingjay',   :git => 'https://github.com/kylef/Mockingjay.git',        :branch => 'master'
+  pod 'URITemplate',  :git => 'https://github.com/kylef/URITemplate.swift.git', :branch => 'master'
 end
 
 def default_pods
-  pod 'SwiftyJSON'
-  pod 'Alamofire'
+  pod 'Argo',   :git => 'https://github.com/Eke/Argo.git',          :branch => 'master'
+  pod 'Ogra'
+  pod 'Runes',  :git => 'https://github.com/thoughtbot/Runes.git',  :branch => 'master'
+  pod 'Swish',  :git => 'https://github.com/Eke/Swish.git',         :branch => 'swift-3.0'
+  pod 'Result'
 end
 
 target 'Disc-iOS' do

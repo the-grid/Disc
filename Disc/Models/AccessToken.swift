@@ -1,5 +1,6 @@
 import Argo
 import Ogra
+import Runes
 
 /// An access token.
 public struct AccessToken {
@@ -20,7 +21,7 @@ public struct AccessToken {
 // Mark: - Decodable
 
 extension AccessToken: Decodable {
-    public static func decode(j: JSON) -> Decoded<AccessToken> {
+    public static func decode(_ j: JSON) -> Decoded<AccessToken> {
         return curry(self.init)
             <^> j <| "access_token"
             <*> j <|? "refresh_token"
@@ -32,7 +33,7 @@ extension AccessToken: Decodable {
 
 extension AccessToken: Encodable {
     public func encode() -> JSON {
-        return .Object([
+        return .object([
             "access_token": accessToken.encode(),
             "refresh_token": refreshToken.encode()
         ])

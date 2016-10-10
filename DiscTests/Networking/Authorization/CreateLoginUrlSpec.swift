@@ -1,6 +1,6 @@
 import Disc
-import Nimble
 import Quick
+import Nimble
 
 class CreateLoginUrlSpec: QuickSpec {
     override func spec() {
