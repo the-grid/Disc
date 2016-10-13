@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.dependency "Swish", "~> 1.0.0"
   s.dependency "Argo", "~> 4.0.0"
-  s.dependency "Ogra", "~> 3.0.0"
+  s.dependency "Ogra", "~> 3.1.0"
 end
