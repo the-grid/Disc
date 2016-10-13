@@ -4,8 +4,7 @@ git:
   submodules: false
 before_install:
   - rvm get head
-  - brew update
-  - brew unlink carthage
-  - brew install carthage
+  - gem install cocoapods --no-document --quiet
+  - gem install xcpretty --no-document --quiet
 install: script/install
 script: script/test
