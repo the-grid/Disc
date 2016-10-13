@@ -178,6 +178,10 @@
 		7689B1DA1CE13FDF006C7939 /* RefreshAccessTokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshAccessTokenSpec.swift; sourceTree = "<group>"; };
 		7696210D1CDB422A00741BD6 /* StringDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringDeserializer.swift; sourceTree = "<group>"; };
 		76D9B8C91CD3487D001A8ADF /* RequestEmailLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEmailLogin.swift; sourceTree = "<group>"; };
+		8B1762F01DABEE220025C9DA /* Pods_Disc_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Disc_iOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Disc-hadqiigmjzursibekpqesvcsfaam/Build/Products/Debug-iphonesimulator/Pods_Disc_iOS.framework"; sourceTree = "<group>"; };
+		8B9A52311DAF7D6700B6A2CF /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = "Pods/../build/Debug-iphoneos/Argo-iOS/Argo.framework"; sourceTree = "<group>"; };
+		8B9A52331DAF7D7900B6A2CF /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = "Pods/../build/Debug/Argo-OSX/Argo.framework"; sourceTree = "<group>"; };
+		8B9A52341DAF7D7900B6A2CF /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = "Pods/../build/Debug-iphoneos/Argo-iOS/Argo.framework"; sourceTree = "<group>"; };
 		8F95625E53D6C78C93034819 /* Pods_Disc_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Disc_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B3D3AF9AC054D803E4C46E6 /* Pods-Disc-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Disc-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Disc-iOS/Pods-Disc-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A8C7BF712CBA5374B443E491 /* Pods-Disc-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Disc-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Disc-iOSTests/Pods-Disc-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -457,6 +461,10 @@
 		C9F2B511C4A1419C54A74253 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B9A52331DAF7D7900B6A2CF /* Argo.framework */,
+				8B9A52341DAF7D7900B6A2CF /* Argo.framework */,
+				8B9A52311DAF7D6700B6A2CF /* Argo.framework */,
+				8B1762F01DABEE220025C9DA /* Pods_Disc_iOS.framework */,
 				8F95625E53D6C78C93034819 /* Pods_Disc_Mac.framework */,
 				41061C021385A1684E7F6FC8 /* Pods_Disc_MacTests.framework */,
 				1DBFABAC44ABAAD3AA0CE7A9 /* Pods_Disc_iOS.framework */,
@@ -690,7 +698,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		31625713504758F172B6F00A /* [CP] Embed Pods Frameworks */ = {
@@ -720,7 +728,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		89FA66BEDF8824F8E99B5F53 /* [CP] Copy Pods Resources */ = {
@@ -750,7 +758,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9693F401032227C27F538744 /* [CP] Copy Pods Resources */ = {
@@ -780,7 +788,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D36E108BE640E481EE489544 /* [CP] Copy Pods Resources */ = {
@@ -1039,7 +1047,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 021C3ACF9FC9C312831AF55F /* Pods-Disc-Mac.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1064,7 +1072,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6EC3EB3780069D3612AE2A2B /* Pods-Disc-Mac.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1088,7 +1096,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9BF6914BD9A5DCBCC672C91 /* Pods-Disc-MacTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DiscTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -1101,7 +1109,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3DE34D9C5E948F7AA51D7695 /* Pods-Disc-MacTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DiscTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -1114,7 +1122,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0B2F80889F3F33F2DC46E48 /* Pods-Disc-iOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1123,11 +1131,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_TESTABILITY = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Disc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1147,7 +1151,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B3D3AF9AC054D803E4C46E6 /* Pods-Disc-iOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1155,11 +1159,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Disc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1179,7 +1179,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4540BE7CD34D27633D89E0AB /* Pods-Disc-iOSTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1197,7 +1197,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8C7BF712CBA5374B443E491 /* Pods-Disc-iOSTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
