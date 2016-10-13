@@ -4,8 +4,7 @@ git:
   submodules: false
 before_install:
   - rvm get head
-  - gem install cocoapods --no-document --quiet
+  - gem install cocoapods -v 1.1.0.rc.2 --no-document --quiet
   - gem install xcpretty --no-document --quiet
-  - pod repo update
 install: script/install
 script: script/test
