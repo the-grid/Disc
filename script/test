@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-xcodebuild -workspace Disc.xcworkspace -scheme Disc-Mac -sdk macosx clean test &&
-xcodebuild -workspace Disc.xcworkspace -scheme Disc-iOS -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6s,OS=9.3" clean test
+xcodebuild -workspace Disc.xcworkspace -scheme Disc-Mac -sdk macosx10.12 -destination "arch=x86_64" clean build | xcpretty -c
+#xcodebuild -workspace Disc.xcworkspace -scheme Disc-iOS -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6s,OS=10.0" clean build | xcpretty -c
