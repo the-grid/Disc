@@ -1,8 +1,8 @@
 PODS:
   - Argo (4.0.0):
     - Runes (>= 4.0.0)
-  - Ogra (3.1.0):
-    - Argo (~> 4.0.0)
+  - Ogra (4.0.0):
+    - Argo (~> 4.0)
   - Result (3.0.0)
   - Runes (4.0.0)
   - Swish (1.0.0):
@@ -11,34 +11,28 @@ PODS:
 
 DEPENDENCIES:
   - Argo (>= 4.0.0)
-  - Ogra (from `https://github.com/Eke/Ogra.git`, branch `master`)
+  - Ogra
   - Result
   - Runes (>= 4.0.0)
   - Swish (from `https://github.com/Eke/Swish.git`, branch `swift-3.0`)
 
 EXTERNAL SOURCES:
-  Ogra:
-    :branch: master
-    :git: https://github.com/Eke/Ogra.git
   Swish:
     :branch: swift-3.0
     :git: https://github.com/Eke/Swish.git
 
 CHECKOUT OPTIONS:
-  Ogra:
-    :commit: fa105c27379f14fff57059f52ad063a01334d10e
-    :git: https://github.com/Eke/Ogra.git
   Swish:
     :commit: 0e4fafefaa6182b6671343c303ad308aa2669fc3
     :git: https://github.com/Eke/Swish.git
 
 SPEC CHECKSUMS:
   Argo: e808d20ee2e95c4498276ca1812d75d3b0b00090
-  Ogra: 42a3a4145648c97dba9d42959c15773c11abdabd
+  Ogra: 39bde7c29a5b083dafb84af60da4c12eb7f620e3
   Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
   Runes: 423ee2dac4dedb4626a859c0962c934195ba8433
   Swish: 1a870700f32b203458a6565059a8f5a57f63ab6b
 
-PODFILE CHECKSUM: da54c1e5b88118ca9f2b8550f2b5e0c8f598694f
+PODFILE CHECKSUM: ed6d8bdb277ebae3089644f706fab6e8bdbfea58
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.0.1

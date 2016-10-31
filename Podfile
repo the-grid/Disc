@@ -12,7 +12,7 @@ end
 
 def default_pods
   pod 'Argo', '>= 4.0.0'
-  pod 'Ogra', :git => 'https://github.com/Eke/Ogra.git', :branch => 'master'
+  pod 'Ogra'
   pod 'Runes', '>= 4.0.0'
   pod 'Swish', :git => 'https://github.com/Eke/Swish.git', :branch => 'swift-3.0'
   pod 'Result'
