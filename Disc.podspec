@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Disc"
-  s.version      = "0.6.0"
+  s.version      = "0.6.1"
   s.summary      = "An API client for Grid Passport."
   s.homepage     = "https://github.com/the-grid/Disc"
   s.license     = { :type => "MIT" }
@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.dependency "Swish", "~> 1.0.0"
   s.dependency "Argo", "~> 4.0.0"
-  s.dependency "Ogra", "~> 3.1.0"
+  s.dependency "Ogra", "~> 4.0.0"
 end
