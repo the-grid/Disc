@@ -11,7 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Argo (>= 4.0.0)
-  - Ogra
+  - Ogra (>= 4.0.0)
   - Result
   - Runes (>= 4.0.0)
   - Swish (from `https://github.com/Eke/Swish.git`, branch `swift-3.0`)
@@ -33,6 +33,6 @@ SPEC CHECKSUMS:
   Runes: 423ee2dac4dedb4626a859c0962c934195ba8433
   Swish: 1a870700f32b203458a6565059a8f5a57f63ab6b
 
-PODFILE CHECKSUM: ed6d8bdb277ebae3089644f706fab6e8bdbfea58
+PODFILE CHECKSUM: 7275226e14d5761b9ed07e4a2bb3206b56ff1790
 
 COCOAPODS: 1.0.1
