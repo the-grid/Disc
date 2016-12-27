@@ -5,15 +5,15 @@ private struct GetIdentitiesRequest: Request {
     typealias ResponseObject = [Identity]
     let token: String
     
-    func build() -> NSURLRequest {
-        return createRequest(.GET, "api/user/identities", token: token)
+    func build() -> URLRequest {
+        return createRequest(.GET, "api/user/identities", token: token) as URLRequest
     }
 }
 
 public extension APIClient {
     /// Get the identities for the current user.
-    func getIdentities(completionHandler: Result<[Identity], SwishError> -> Void) {
+    func getIdentities(_ completionHandler: @escaping (Result<[Identity], SwishError>) -> Void) {
         let request = GetIdentitiesRequest(token: token)
-        client.performRequest(request, completionHandler: completionHandler)
+        let _ = client.performRequest(request, completionHandler: completionHandler)
     }
 }

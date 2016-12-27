@@ -17,8 +17,8 @@ private struct AddIdentityRequest: Request {
         body = createRequestParameters(provider: provider, code: authCode, redirectUri: redirectUri)
     }
     
-    func build() -> NSURLRequest {
-        return createRequest(.POST, "api/user/identities", token: token, body: body)
+    func build() -> URLRequest {
+        return createRequest(.POST, "api/user/identities", token: token, body: body as [String : AnyObject])
     }
 }
 
@@ -28,7 +28,7 @@ public extension APIClient {
     /// - parameter provider: The provider of the identity to add.
     /// - parameter token: The access token for the `provider`.
     /// - parameter secret: The token secret for the `provider`.
-    func addIdentity(provider: Provider, token providerAccessToken: String, secret providerTokenSecret: String? = nil, completionHandler: Result<Identity, SwishError> -> Void) {
+    func addIdentity(_ provider: Provider, token providerAccessToken: String, secret providerTokenSecret: String? = nil, completionHandler: @escaping (Result<Identity, SwishError>) -> Void) {
         let request = AddIdentityRequest(
             token: token,
             provider: provider,
@@ -36,7 +36,7 @@ public extension APIClient {
             providerTokenSecret: providerTokenSecret
         )
         
-        client.performRequest(request, completionHandler: completionHandler)
+        let _ = client.performRequest(request, completionHandler: completionHandler)
     }
     
     /// Add an identity using an auth code.
@@ -44,7 +44,7 @@ public extension APIClient {
     /// - parameter provider: The provider of the identity to add.
     /// - parameter code: The auth code for the `provider`.
     /// - parameter redirectUri: The redirect URI for the `provider`.
-    func addIdentity(provider: Provider, code authCode: String, redirectUri: String, completionHandler: Result<Identity, SwishError> -> Void) {
+    func addIdentity(_ provider: Provider, code authCode: String, redirectUri: String, completionHandler: @escaping (Result<Identity, SwishError>) -> Void) {
         let request = AddIdentityRequest(
             token: token,
             provider: provider,
@@ -52,6 +52,6 @@ public extension APIClient {
             redirectUri: redirectUri
         )
         
-        client.performRequest(request, completionHandler: completionHandler)
+        let _ = client.performRequest(request, completionHandler: completionHandler)
     }
 }

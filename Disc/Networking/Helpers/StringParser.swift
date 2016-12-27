@@ -4,15 +4,15 @@ import Swish
 struct StringParser: Parser {
     typealias Representation = String
     
-    static func parse(j: AnyObject) -> Result<String, SwishError> {
+    static func parse(_ j: AnyObject) -> Result<String, SwishError> {
         guard let data = j as? NSData else {
             let error = NSError.error("Bad data!")
-            return .Failure(.URLSessionError(error))
+            return .failure(.urlSessionError(error))
         }
-        guard let string = String(data: data, encoding: NSUTF8StringEncoding) else {
+        guard let string = String(data: data as Data, encoding: String.Encoding.utf8) else {
             let error = NSError.error("Couldn't NSData convert to string!")
-            return .Failure(.URLSessionError(error))
+            return .failure(.urlSessionError(error))
         }
-        return .Success(string)
+        return .success(string)
     }
 }

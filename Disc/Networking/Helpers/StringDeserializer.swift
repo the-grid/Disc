@@ -2,11 +2,11 @@ import Result
 import Swish
 
 struct StringDeserializer: Deserializer {
-    func deserialize(data: NSData?) -> Result<AnyObject, SwishError> {
-        guard let data = data where data.length > 0 else {
-            return .Success(NSNull())
+    func deserialize(_ data: Data?) -> Result<AnyObject, SwishError> {
+        guard let data = data , data.count > 0 else {
+            return .success(NSNull())
         }
         
-        return .Success(data)
+        return .success(data as AnyObject)
     }
 }

@@ -1,20 +1,21 @@
 import Argo
 import Ogra
+import Runes
 
 /// A user.
 public struct User {
-    public let app: NSUUID?
-    public let avatarUrl: NSURL?
+    public let app: UUID?
+    public let avatarUrl: URL?
     public var emailAddress: String
-    public let id: NSUUID
+    public let id: UUID
     public var name: String
     public let scopes: [Scope]?
     
     public init(
-        app: NSUUID? = nil,
-        avatarUrl: NSURL? = nil,
+        app: UUID? = nil,
+        avatarUrl: URL? = nil,
         emailAddress: String,
-        id: NSUUID,
+        id: UUID,
         name: String,
         scopes: [Scope]? = nil
     ) {
@@ -31,7 +32,7 @@ public struct User {
 // Mark: - Decodable
 
 extension User: Decodable {
-    public static func decode(j: JSON) -> Decoded<User> {
+    public static func decode(_ j: JSON) -> Decoded<User> {
         return curry(self.init)
             <^> j <|?  "app"
             <*> j <|?  "avatar"
@@ -47,7 +48,7 @@ extension User: Decodable {
 
 extension User: Encodable {
     public func encode() -> JSON {
-        return .Object([
+        return .object([
             "app": app.encode(),
             "avatar": avatarUrl.encode(),
             "email": emailAddress.encode(),
@@ -64,7 +65,7 @@ extension User: Encodable {
 extension User: Equatable {}
 
 public func == (lhs: User, rhs: User) -> Bool {
-    return lhs.app?.UUIDString == rhs.app?.UUIDString
+    return lhs.app?.uuidString == rhs.app?.uuidString
         && lhs.avatarUrl?.absoluteString == rhs.avatarUrl?.absoluteString
         && lhs.emailAddress == rhs.emailAddress
         && lhs.id == rhs.id

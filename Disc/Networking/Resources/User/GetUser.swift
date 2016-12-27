@@ -12,7 +12,7 @@ private struct GetUserRequest: Request {
         self.id = id
     }
     
-    func build() -> NSURLRequest {
+    func build() -> URLRequest {
         let pathComponent: String
         
         if let id = id {
@@ -21,22 +21,22 @@ private struct GetUserRequest: Request {
             pathComponent = ""
         }
         
-        return createRequest(.GET, "api/user" + pathComponent, token: token)
+        return createRequest(.GET, "api/user" + pathComponent, token: token) as URLRequest
     }
 }
 
 public extension APIClient {
     /// Get the current user.
-    func getUser(completionHandler: Result<User, SwishError> -> Void) {
+    func getUser(_ completionHandler: @escaping (Result<User, SwishError>) -> Void) {
         let request = GetUserRequest(token: token)
-        client.performRequest(request, completionHandler: completionHandler)
+        let _ = client.performRequest(request, completionHandler: completionHandler)
     }
     
     /// Get the user with the provided `id`.
     ///
     /// - parameter id: The ID of the user.
-    func getUser(id: String, completionHandler: Result<User, SwishError> -> Void) {
+    func getUser(_ id: String, completionHandler: @escaping (Result<User, SwishError>) -> Void) {
         let request = GetUserRequest(token: token, id: id)
-        client.performRequest(request, completionHandler: completionHandler)
+        let _ = client.performRequest(request, completionHandler: completionHandler)
     }
 }

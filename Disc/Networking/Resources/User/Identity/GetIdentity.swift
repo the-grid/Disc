@@ -7,8 +7,8 @@ private struct GetIdentityRequest: Request {
     let token: String
     let id: Int
     
-    func build() -> NSURLRequest {
-        return createRequest(.GET, "api/user/identities/\(id)", token: token)
+    func build() -> URLRequest {
+        return createRequest(.GET, "api/user/identities/\(id)", token: token) as URLRequest
     }
 }
 
@@ -16,8 +16,8 @@ public extension APIClient {
     /// Get the identity with the provided `id`.
     ///
     /// - parameter id: The ID of the identity.
-    func getIdentity(id: Int, completionHandler: Result<Identity, SwishError> -> Void) {
+    func getIdentity(_ id: Int, completionHandler: @escaping (Result<Identity, SwishError>) -> Void) {
         let request = GetIdentityRequest(token: token, id: id)
-        client.performRequest(request, completionHandler: completionHandler)
+        let _ = client.performRequest(request, completionHandler: completionHandler)
     }
 }

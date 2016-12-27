@@ -5,15 +5,18 @@ import Ogra
 
 // Mark: - Decodable
 
-extension NSURL: Decodable {
-    public typealias DecodedType = NSURL
+extension URL: Decodable {
+    public typealias DecodedType = URL
     
-    public static func decode(j: JSON) -> Decoded<NSURL> {
-        switch j {
-        case .String(let s):
-            return NSURL(string: s).map(pure) ?? .typeMismatch("URL", actual: j)
+    public static func decode(_ json: JSON) -> Decoded<URL> {
+        switch json {
+        case .string(let s):
+          if let res = URL(string: s).map(pure) {
+            return res
+          }
+          return .typeMismatch(expected: "URL", actual: json)
         default:
-            return .typeMismatch("URL", actual: j)
+            return .typeMismatch(expected: "URL", actual: json)
         }
     }
 }
@@ -21,7 +24,7 @@ extension NSURL: Decodable {
 
 // Mark: - Encodable
 
-extension NSURL: Encodable {
+extension URL: Encodable {
     public func encode() -> JSON {
         return absoluteString.encode()
     }

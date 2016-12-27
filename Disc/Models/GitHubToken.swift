@@ -1,5 +1,6 @@
 import Argo
 import Ogra
+import Runes
 
 /// A GitHub token.
 public struct GitHubToken {
@@ -16,7 +17,7 @@ public struct GitHubToken {
 // Mark: - Decodable
 
 extension GitHubToken: Decodable {
-    public static func decode(j: JSON) -> Decoded<GitHubToken> {
+    public static func decode(_ j: JSON) -> Decoded<GitHubToken> {
         return curry(self.init)
             <^> j <| "username"
             <*> j <| "token"
@@ -28,7 +29,7 @@ extension GitHubToken: Decodable {
 
 extension GitHubToken: Encodable {
     public func encode() -> JSON {
-        return .Object([
+        return .object([
             "username": username.encode(),
             "token": value.encode()
         ])
